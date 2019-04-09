@@ -15,14 +15,18 @@
 
   width: 67px;
   height: 51px;
+
+  background-position: 50% 0;
 }
 
 .catalog__image--slim {
-  background-image: url("../../img/icon-cat-slim.svg");
+  background-image: url("../img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
 }
 
 .catalog__image--pro {
-  background-image: url("../../img/icon-cat-pro.svg");
+  background-image: url("../img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
 }
 
 .catalog__header {

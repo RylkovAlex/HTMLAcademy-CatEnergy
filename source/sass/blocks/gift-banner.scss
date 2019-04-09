@@ -11,17 +11,22 @@
 
 .gift-banner__image {
   display: block;
+  width: 280px;
+  height: 289px;
   background-color: $color;
-  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
 }
 
 .gift-banner__icon {
   display: block;
-  background-image: url("../../img/icon-gift.svg");
+  width: 56px;
+  height: 61px;
+  background: url("../img/icon-gift.svg") no-repeat;
 }
 
 .gift-banner__text {
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   color: #ffffff;
 }
