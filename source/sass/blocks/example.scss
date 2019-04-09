@@ -1,0 +1,36 @@
+.example {
+  @include margin-0;
+  padding: 20px;
+
+  background-color: #f2f2f2;
+}
+
+.example__title {
+  @include oswald-r;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: left;
+  text-transform: none;
+  color: $title-color;
+}
+
+.example__fact-value {
+  @include oswald-r;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.example__fact-title {
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.example__cost {
+  @include oswald-r;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: $title-color;
+}

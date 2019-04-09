@@ -1,0 +1,28 @@
+.advantages {
+  @include margin-0;
+  padding: 20px;
+}
+
+.advantages__title {
+  @include margin-0;
+  margin-bottom: 35px;
+
+  @include oswald-r;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: left;
+  text-transform: none;
+  color: $title-color;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
+.advantages__item {
+
+}
+
+.advantages__description {
+  padding-left: 80px;
+}

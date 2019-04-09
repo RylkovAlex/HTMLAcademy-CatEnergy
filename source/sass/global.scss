@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'oswaldmedium';
+  src:
+    url('../../fonts/oswaldmedium.woff2') format('woff2'),
+    url('../../fonts/oswaldmedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'oswaldregular';
+  src:
+    url('../../fonts/oswaldregular.woff2') format('woff2'),
+    url('../../fonts/oswaldregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin oswald-r {
+  font-family: 'oswaldregular';
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin oswald-m {
+  font-family: 'oswaldmedium';
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin margin-0 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+$color: #68b738;
+$title-color: #111111;

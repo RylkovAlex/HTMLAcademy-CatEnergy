@@ -1,0 +1,45 @@
+.catalog {
+  @include margin-0;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top:  22px;
+  padding-bottom: 22px;
+
+  margin-bottom: 20px;
+
+  background-color: #f2f2f2;
+}
+
+.catalog__image {
+  position: absolute;
+
+  width: 67px;
+  height: 51px;
+}
+
+.catalog__image--slim {
+  background-image: url("../../img/icon-cat-slim.svg");
+}
+
+.catalog__image--pro {
+  background-image: url("../../img/icon-cat-pro.svg");
+}
+
+.catalog__header {
+  @include margin-0;
+  padding-left: 72px;
+
+  @include oswald-r;
+  font-size: 24px;
+  line-height: 37px;
+  color: $title-color;
+  text-align: left;
+}
+
+.catalog__button {
+  @include oswald-r;
+  font-size: 16px;
+  line-height: 16px;
+  color: $title-color;
+  text-align: left;
+}
