@@ -1,4 +1,5 @@
 .button {
+  display: block;
   @include margin-0;
   padding-top: 11px;
   padding-bottom: 11px;
@@ -12,4 +13,9 @@
   color: #ffffff;
 
   background-color: $color;
+}
+
+.button--show-more {
+  background-color: #f2f2f2;
+  color: #444444;
 }

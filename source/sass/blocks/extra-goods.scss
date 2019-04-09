@@ -1,0 +1,59 @@
+.extra-goods {
+  @include margin-0;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 39px;
+}
+
+.extra-goods__title {
+  @include margin-0;
+
+  @include oswald-r;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
+  color: $title-color;
+}
+
+.extra-goods__name {
+  @include oswald-r;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+}
+
+.extra-goods__quantity,
+.extra-goods__price {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.extra-goods__table {
+  border-collapse: collapse;
+  // width: 320px;
+}
+
+.extra-goods__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #ededed;
+}
+
+.extra-goods__title {
+  width: 100%;
+}
+
+.extra-goods__name {
+  @include oswald-r;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+
+  border-top: 1px solid #ededed;
+}
+
+.extra-goods__button {
+  width: 100%;
+}
