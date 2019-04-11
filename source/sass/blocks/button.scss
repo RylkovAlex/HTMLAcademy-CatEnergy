@@ -1,6 +1,7 @@
 .button {
   display: block;
-  @include margin-0;
+
+  @include indents-0;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 20px;
@@ -12,7 +13,7 @@
   text-align: center;
   color: #ffffff;
 
-  background-color: $color;
+  background-color: $theme-color;
 }
 
 .button--show-more {

@@ -6,12 +6,11 @@
 
   background:
     url("../img/index-background-mobile@1x.jpg") no-repeat 50% 0,
-    linear-gradient($color 305px, #ffffff 305px);
+    linear-gradient($theme-color 305px, #ffffff 305px);
 }
 
 .banner__title {
-  @include margin-0;
-
+  @include indents-0;
   @include oswald-r;
   font-size: 36px;
   line-height: 36px;

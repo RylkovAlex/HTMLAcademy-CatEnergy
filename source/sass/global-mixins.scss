@@ -1,0 +1,18 @@
+@mixin oswald-r {
+  font-family: "oswaldregular", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin oswald-m {
+  font-family: "oswaldmedium", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin indents-0 {
+  margin: 0;
+  padding: 0;
+}

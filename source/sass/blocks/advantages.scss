@@ -1,10 +1,10 @@
 .advantages {
-  @include margin-0;
+  @include indents-0;
   padding: 20px;
 }
 
 .advantages__title {
-  @include margin-0;
+  @include indents-0;
   margin-bottom: 35px;
 
   @include oswald-r;
@@ -17,10 +17,6 @@
 
 .advantages__list {
   list-style: none;
-}
-
-.advantages__item {
-
 }
 
 .advantages__description {

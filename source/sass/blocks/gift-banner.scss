@@ -1,5 +1,5 @@
 .gift-banner {
-  @include margin-0;
+  @include indents-0;
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 35px;
@@ -13,8 +13,8 @@
   display: block;
   width: 280px;
   height: 289px;
-  background-color: $color;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+  background-color: $theme-color;
 }
 
 .gift-banner__icon {
