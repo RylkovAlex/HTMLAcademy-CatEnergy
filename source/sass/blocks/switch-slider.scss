@@ -1,0 +1,7 @@
+.switch-slider__slide-title {
+  @include oswald-r;
+  font-size: 16px;
+  line-height: 20px;
+  color: $title-color;
+  text-align: left;
+}

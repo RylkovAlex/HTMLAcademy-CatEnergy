@@ -1,0 +1,32 @@
+.gift-banner {
+  @include indents-0;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 35px;
+}
+
+.gift-banner__link {
+  display: block;
+}
+
+.gift-banner__image {
+  display: block;
+  width: 280px;
+  height: 289px;
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+  background-color: $theme-color;
+}
+
+.gift-banner__icon {
+  display: block;
+  width: 56px;
+  height: 61px;
+  background: url("../img/icon-gift.svg") no-repeat;
+}
+
+.gift-banner__text {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}

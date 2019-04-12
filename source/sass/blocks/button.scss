@@ -1,0 +1,22 @@
+.button {
+  display: block;
+
+  @include indents-0;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include oswald-r;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: $theme-color;
+}
+
+.button--show-more {
+  background-color: $bg-grey;
+  color: $light-black4;
+}

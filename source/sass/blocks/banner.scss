@@ -1,0 +1,29 @@
+.banner {
+  padding-top: 29px;
+  padding-right: 38px;
+  padding-left: 38px;
+  padding-bottom: 22px;
+
+  background:
+    url("../img/index-background-mobile@1x.jpg") no-repeat 50% 0,
+    linear-gradient($theme-color 305px, #ffffff 305px);
+}
+
+.banner__title {
+  @include indents-0;
+  @include oswald-r;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: none;
+
+  color: #ffffff;
+}
+
+.banner__lead {
+  @include oswald-r;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+}

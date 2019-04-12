@@ -1,0 +1,13 @@
+.catalogues {
+  @include indents-0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.catalogues__list {
+  list-style: none;
+}
+
+.catalogues__item {
+  position: relative;
+}
