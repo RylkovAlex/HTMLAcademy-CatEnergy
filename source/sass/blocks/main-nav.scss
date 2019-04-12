@@ -1,0 +1,16 @@
+.main-nav {
+  @include indents-0;
+  @include oswald-m;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: $title-color;
+}
+
+.main-nav__toggle {
+  font-size: 0;
+}
+
+.main-nav__menu-list {
+  list-style: none;
+}
