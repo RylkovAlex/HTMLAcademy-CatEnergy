@@ -33,9 +33,9 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-title">Подбор программы</h1>
     <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-      <h2 class="form__title">Заполните анкету и мы подберем программу питания для вашего кота</h2>
+      <h1 class="form__title">Подбор программы</h1>
+      <b class="form__lead">Заполните анкету и мы подберем программу питания для вашего кота</b>
 
       <fieldset>
         <div class="form__row">
@@ -92,21 +92,21 @@
       <fieldset>
         <legend class="form__legend">Дополнительно</legend>
         <div class="form__row">
-          <input class="visually-hidden form__checkbox" id="sugar-free" type="checkbox" name="sugar-free"
+          <input class="visually-hidden form__checkbox-input" id="sugar-free" type="checkbox" name="sugar-free"
             value="sugar-free" checked>
-          <label for="sugar-free">Сахорозаменитель</label>
-        </div>>
-        <div class="form__row">
-          <input class="visually-hidden form__checkbox" id="water" type="checkbox" name="water" value="water">
-          <label for="water">Питьевая вода</label>
+          <label class="form__checkbox-label" for="sugar-free">Сахорозаменитель</label>
         </div>
         <div class="form__row">
-          <input class="visually-hidden form__checkbox" id="milk" type="checkbox" name="milk" value="milk">
-          <label for="milk">Молоко</label>
+          <input class="visually-hidden form__checkbox-input" id="water" type="checkbox" name="water" value="water">
+          <label class="form__checkbox-label" for="water">Питьевая вода</label>
+        </div>
+        <div class="form__row">
+          <input class="visually-hidden form__checkbox-input" id="milk" type="checkbox" name="milk" value="milk">
+          <label class="form__checkbox-label" for="milk">Молоко</label>
         </div>
         <div class="form__row">
           <input class="visually-hidden form__checkbox" id="vitamins" type="checkbox" name="vitamins" value="vitamins">
-          <label for="vitamins">Витамины</label>
+          <label class="form__checkbox-label" for="vitamins">Витамины</label>
         </div>
       </fieldset>
 
@@ -114,7 +114,7 @@
       <small class="form__explanation">* — Обязательные поля</small>
     </form>
 
-    <section class="contacts--color">
+    <section class="contacts--grey">
       <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       <div class="contacts__map">

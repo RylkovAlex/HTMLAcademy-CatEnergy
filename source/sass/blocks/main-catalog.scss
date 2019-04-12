@@ -14,8 +14,8 @@
   text-transform: none;
   color: $title-color;
 
-  border-top: 1px solid #ededed;
-  border-bottom: 1px solid #ededed;
+  border-top: 1px solid $border-grey;
+  border-bottom: 1px solid $border-grey;
 }
 
 .main-catalog__list {
@@ -28,7 +28,7 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid $border-grey;
 }
 
 .main-catalog__item-name {
@@ -56,5 +56,5 @@
   text-align: center;
   color: $title-color;
 
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid $border-grey;
 }

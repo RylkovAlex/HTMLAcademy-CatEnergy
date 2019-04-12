@@ -1,6 +1,4 @@
 @import "global-vars.scss";
-@import "fonts.scss";
-@import "colors.scss";
 @import "global-mixins.scss";
 //
 @import "base.scss";
@@ -19,3 +17,5 @@
 @import "blocks/main-catalog.scss";
 @import "blocks/extra-goods.scss";
 @import "blocks/gift-banner.scss";
+//
+@import "blocks/form.scss";
