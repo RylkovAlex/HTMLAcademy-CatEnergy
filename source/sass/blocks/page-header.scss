@@ -50,17 +50,25 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
+  .page-header--index {
     position: absolute;
     left: 50%;
     top: 0;
     transform: translate(-50%);
 
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  .page-header--catalog {
+    color: $title-color;
+  }
+
+  .page-header {
     padding-left: 72px;
     padding-right: 72px;
     padding-top: 52px;
 
-    background-color: transparent;
     min-height: 180px; //сетка
     width: $desktop-width;
   }
