@@ -1,5 +1,9 @@
 .advantages {
+  width: 320px;
+  min-height: 430px; //сетка
+
   @include indents-0;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -16,9 +20,54 @@
 }
 
 .advantages__list {
+  @include indents-0;
   list-style: none;
 }
 
 .advantages__description {
   padding-left: 80px;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    width: $tablet-width;
+    min-height: 780px; //сетка
+    padding: 30px;
+  }
+
+  .advantages__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+
+    min-height: 600px;
+  }
+
+  .advantages__item {
+    width: 50%;
+    min-height: 285px; //сетка
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    width: $desktop-width;
+    min-height: 360px; //сетка
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .advantages__item {
+    width: 245px;
+  }
+
+  .advantages__list {
+    min-height: auto;
+  }
 }

@@ -34,14 +34,15 @@
 
   <main class="page-main">
     <section class="banner">
-      <div class="banner__text-box">
-        <h1 class="banner__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
-        <p class="banner__lead">Занялся собой? Займись котом!</p>
-        <img class="banner__image--mobile" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Изображение товара - Функциональное питание для котов">
-        <a class="banner__button button" href="#">Подобрать программу</a>
+      <div class="banner__wrapper">
+        <div class="banner__text-box">
+          <h1 class="banner__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
+          <p class="banner__lead">Занялся собой? Займись котом!</p>
+          <img class="banner__image--mobile" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Изображение товара - Функциональное питание для котов">
+          <a class="banner__button button" href="#">Подобрать программу</a>
+        </div>
+        <img class="banner__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Изображение товара - Функциональное питание для котов">
       </div>
-      <img class="banner__image" src="img/index-can-mobile@1x.png" width="280" height="270"
-        alt="Изображение товара - Функциональное питание для котов">
     </section>
     <section class="catalogues">
       <ul class="catalogues__list">
@@ -82,19 +83,21 @@
     </section>
 
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-        Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-        часов в день.</p>
-      <div class="example__fact">
-        <p class="example__fact-value">5 кг</p>
-        <small class="example__fact-title">Снижение веса</small>
+      <div class="example__text-content">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+          часов в день.</p>
+        <div class="example__fact">
+          <p class="example__fact-value">5 кг</p>
+          <small class="example__fact-title">Снижение веса</small>
+        </div>
+        <div class="example__fact">
+          <p class="example__fact-value">60 дней</p>
+          <small class="example__fact-title">Затрачено времени</small>
+        </div>
+        <p class="example__cost">Затраты на питание: 15 000 руб.</p>
       </div>
-      <div class="example__fact">
-        <p class="example__fact-value">60 дней</p>
-        <small class="example__fact-title">Затрачено времени</small>
-      </div>
-      <p class="example__cost">Затраты на питание: 15 000 руб.</p>
       <div class="example__slider switch-slider">
         <img class="switch-slider__image switch-slider__image--slide-1" src="img/before-mobile@1x.png" width="311"
           height="232" alt="Фото кота ДО">
@@ -110,8 +113,10 @@
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
-      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="contacts__text-box">
+        <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
       <div class="contacts__map">
         <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта">
         <img class="contacts__map-pin" src="img/map-pin.png" width="55" height="53"
@@ -121,7 +126,9 @@
   </main>
 
   <footer class="page-footer">
-    <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+    <div class="page-footer__logo">
+      <img class="page-footer__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+    </div>
     <ul class="page-footer__social-links social-links">
       <li class="social-links__item social-links__item--vk">
         <a href="#">VK</a>
@@ -133,11 +140,13 @@
         <a href="#">Facebook</a>
       </li>
     </ul>
-    <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-    <a class="page-footer__copyright-image" href="https://htmlacademy.ru/intensive/adaptive">
-      <img class="page-footer__copyright-icon" src="img/htmlacademy.svg" width="27" height="34"
-        alt="логотип академии">
-    </a>
+    <div class="page-footer__copyright">
+      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="page-footer__copyright-image" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="page-footer__copyright-icon" src="img/htmlacademy.svg" width="27" height="34"
+          alt="логотип академии">
+      </a>
+    </div>
   </footer>
 
 </body>

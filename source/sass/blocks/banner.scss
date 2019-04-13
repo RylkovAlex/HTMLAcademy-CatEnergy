@@ -38,17 +38,19 @@
 .banner__image {
   display: none;
 }
-
+// TABLET
 @media (min-width: $tablet-width) {
   .banner {
-    position: relative;
-
     width: $tablet-width;
-    min-height: 828px; //сетка
+    min-height: 842px; //сетка
     padding-top: 21px;
     padding-right: 30px;
-    padding-left: 118px;
+    padding-left: 30px;
     background: none;
+  }
+
+  .banner__wrapper {
+    padding-left: 88px;
   }
 
   .banner__title {
@@ -61,6 +63,8 @@
   }
 
   .banner__lead {
+    margin-bottom: 47px;
+
     font-size: 20px;
     line-height: 20px;
     text-align: left;
@@ -74,28 +78,29 @@
   .banner__image {
     display: block;
   }
-
-  .banner__button {
-    position: absolute;
-    top: 250px;
-    left: 118px;
-  }
 }
-
+// DESKTOP
 @media (min-width: $desktop-width) {
   .banner {
-    position: unset;
-
-    display: flex;
     width: auto;
+    @include indents-0;
+    min-height: 696px; //сетка
     padding-top: 144px;
+    margin-bottom: 78px;
 
     background-image: linear-gradient(to right, #ffffff 50%, $theme-color 50%);
   }
 
+  .banner__wrapper {
+    display: flex;
+    @include indents-0;
+    width: $desktop-width;
+    margin: 0 auto;
+  }
+
   .banner__text-box {
     width: 50%;
-    padding-left: 5.5%;
+    padding-left: 190px;
     padding-top: 78px;
   }
 

@@ -1,12 +1,26 @@
 .contacts {
+  width: 320px;
+  min-height: 480px; //сетка
   @include indents-0;
+  margin: 0 auto;
+}
+
+.contacts--grey {
+  background-color: $bg-grey;
+}
+
+.contacts__text-box {
+  display: flex;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 31px;
   padding-bottom: 26px;
+
+  background-color: #ffffff;
 }
 
 .contacts__title {
+  width: 50%;
   @include oswald-r;
   font-size: 16px;
   line-height: 20px;
@@ -14,6 +28,37 @@
   color: $title-color;
 }
 
-.contacts--grey {
-  background-color: $bg-grey;
+.contacts__address {
+  width: 50%;
 }
+
+.contacts__map {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    width: $tablet-width;
+    min-height: 597px; //сетка
+  }
+  .contacts__text-box {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+    width: $desktop-width;
+    min-height: 400px;
+  }
+
+  .contacts__text-box {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+  }
+}
+
