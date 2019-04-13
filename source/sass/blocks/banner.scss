@@ -83,6 +83,7 @@
 @media (min-width: $desktop-width) {
   .banner {
     width: auto;
+
     @include indents-0;
     min-height: 696px; //сетка
     padding-top: 144px;
@@ -93,6 +94,7 @@
 
   .banner__wrapper {
     display: flex;
+
     @include indents-0;
     width: $desktop-width;
     margin: 0 auto;
