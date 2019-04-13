@@ -1,4 +1,9 @@
 .main-nav {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
   @include indents-0;
   @include oswald-m;
   font-size: 20px;
@@ -8,7 +13,21 @@
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: -29px;
+  right: 3px;
+  width: 19px;
+  height: 19px;
+
   font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/icon-close.svg");
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__menu-list {

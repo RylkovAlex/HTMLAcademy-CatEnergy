@@ -1,4 +1,11 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 65px;
+  width: 320px;
+  margin: 0 auto;
+
   padding-top: 11px;
   padding-bottom: 15px;
   padding-left: 20px;
@@ -11,4 +18,30 @@
   color: $title-color;
 
   background-color: #ffffff;
+}
+
+.page-header__logo-link {
+  display: block;
+  @include indents-0;
+}
+
+.page-header__logo-img {
+  display: block;
+  @include indents-0;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    min-height: 108px;
+    min-width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    min-height: 700px;
+    width: $desktop-width;
+
+    background-image: linear-gradient(to right, #ffffff 50%, $theme-color 50%);
+  }
 }
