@@ -14,8 +14,8 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -29px;
-  right: 3px;
+  top: -42px;
+  right: 24px;
   width: 19px;
   height: 19px;
 
@@ -31,5 +31,58 @@
 }
 
 .main-nav__menu-list {
+  @include indents-0;
   list-style: none;
+}
+
+.main-nav__item {
+  padding-top: 22px;
+  padding-bottom: 23px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border-top: 1px $border-grey solid;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    @include oswald-r;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: left;
+    color: $light-black2;
+  }
+
+  .main-nav__menu-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__item {
+    padding-left: 18px;
+    padding-right: 18px;
+
+    border: none;
+  }
+
+  .main-nav__item:last-child {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: 50%;
+
+    @include oswald-r;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .main-nav__menu-list {
+    justify-content: center;
+    padding-left: 75px;
+  }
 }

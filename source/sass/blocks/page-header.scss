@@ -2,14 +2,9 @@
   display: flex;
   flex-direction: column;
 
-  min-height: 65px;
+  min-height: 65px; //сетка
   width: 320px;
   margin: 0 auto;
-
-  padding-top: 11px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   @include oswald-m;
   font-size: 20px;
@@ -22,26 +17,51 @@
 
 .page-header__logo-link {
   display: block;
+
   @include indents-0;
+  padding-top: 11px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .page-header__logo-img {
   display: block;
+
   @include indents-0;
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
-    min-height: 108px;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 108px; //сетка
     min-width: $tablet-width;
+
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 19px;
+    padding-bottom: 30px;
+  }
+
+  .page-header__logo-link {
+    @include indents-0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    min-height: 700px;
-    width: $desktop-width;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
 
-    background-image: linear-gradient(to right, #ffffff 50%, $theme-color 50%);
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 52px;
+
+    background-color: transparent;
+    min-height: 180px; //сетка
+    width: $desktop-width;
   }
 }
