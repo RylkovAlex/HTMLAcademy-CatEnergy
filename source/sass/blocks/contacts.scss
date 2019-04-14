@@ -6,10 +6,6 @@
   margin: 0 auto;
 }
 
-.contacts--grey {
-  background-color: $bg-grey;
-}
-
 .contacts__text-box {
   display: flex;
   padding-left: 20px;
@@ -18,6 +14,10 @@
   padding-bottom: 26px;
 
   background-color: #ffffff;
+}
+
+.contacts__text-box--grey {
+  background-color: $bg-grey;
 }
 
 .contacts__title {
@@ -37,7 +37,7 @@
 .contacts__map {
   width: 100%;
 }
-
+//TABLET:
 @media (min-width: $tablet-width) {
   .contacts {
     width: $tablet-width;
@@ -62,5 +62,9 @@
     top: 95px;
     left: 110px;
     width: 570px;
+  }
+
+  .contacts__text-box--grey { //наверное, не совсем правильно... как ещё там можно цвет переопределить?
+    background-color: #ffffff;
   }
 }

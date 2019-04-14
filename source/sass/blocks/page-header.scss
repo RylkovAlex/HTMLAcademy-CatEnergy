@@ -50,6 +50,15 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 52px;
+
+    min-height: 180px; //сетка
+    width: $desktop-width;
+  }
+
   .page-header--index {
     position: absolute;
     left: 50%;
@@ -62,14 +71,5 @@
 
   .page-header--catalog {
     color: $title-color;
-  }
-
-  .page-header {
-    padding-left: 72px;
-    padding-right: 72px;
-    padding-top: 52px;
-
-    min-height: 180px; //сетка
-    width: $desktop-width;
   }
 }

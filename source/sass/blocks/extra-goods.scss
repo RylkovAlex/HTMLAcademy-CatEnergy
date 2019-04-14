@@ -1,11 +1,34 @@
 .extra-goods {
+  width: $mobile-width;
+
   @include indents-0;
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 39px;
 }
 
-.extra-goods__title {
+.extra-goods__table {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  border-collapse: collapse;
+}
+
+.extra-goods__table tbody {
+  width: 100%;
+}
+
+.extra-goods__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  border-bottom: 1px solid $border-grey;
+}
+
+.extra-goods__heading {
   width: 100%;
 
   @include indents-0;
@@ -21,29 +44,77 @@
   font-size: 16px;
   line-height: 16px;
   color: $light-black2;
-
-  border-top: 1px solid $border-grey;
 }
 
 .extra-goods__quantity,
 .extra-goods__price {
+  width: 50%;
+
   font-size: 14px;
   line-height: 14px;
 }
 
-.extra-goods__table {
-  border-collapse: collapse;
-  // width: 320px;
-}
-
-.extra-goods__item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  border-bottom: 1px solid $border-grey;
-}
-
 .extra-goods__button {
   width: 100%;
+}
+
+.extra-goods__button a {
+  width: 100%;
+}
+
+//TABLET:
+@media (min-width: $tablet-width) {
+  .extra-goods {
+    width: $tablet-width;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 70px;
+  }
+
+  .extra-goods__heading {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .extra-goods__table {
+    margin-bottom: 70px;
+  }
+
+  .extra-goods__item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .extra-goods__title {
+    width: 50%;
+    margin-right: auto;
+  }
+
+  .extra-goods__name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra-goods__quantity,
+  .extra-goods__price {
+    width: 20%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra-goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: $desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin-bottom: 70px;
+  }
+
+  .extra-goods__table {
+    width: 895px;
+    margin-bottom: 70px;
+  }
 }
