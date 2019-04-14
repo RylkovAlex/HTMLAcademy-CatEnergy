@@ -1,11 +1,12 @@
 .form {
+  display: flex;
+  flex-direction: column;
+  width: $mobile-width;
+
   @include indents-0;
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.form fieldset {
-  border: none;
 }
 
 .form__title {
@@ -27,10 +28,25 @@
   color: $title-color;
 }
 
+.form__legend {
+  @include indents-0;
+  @include oswald-r;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+  color: $title-color;
+}
+
+.form__explanation {
+  @include indents-0;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
 .form__text-label,
 .form__radio-label,
 .form__checkbox-label {
-  @include indents-0;
   @include oswald-r;
   font-size: 16px;
   line-height: 18px;
@@ -48,18 +64,110 @@
   color: $light-black4;
 }
 
-.form__legend {
-  @include indents-0;
-  @include oswald-r;
-  font-size: 24px;
-  line-height: 24px;
-  text-align: left;
-  color: $title-color;
+//--------------
+
+.form__row input,
+.form__row label {
+  display: block;
 }
 
-.form__explanation {
+.form fieldset {
   @include indents-0;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
+  padding-top: 29px;
+  padding-bottom: 26px;
+  border: none;
+}
+
+.form__row {
+  display: flex;
+}
+
+.form__text-input {
+  flex-grow: 1;
+}
+
+.form__text-label {
+  margin-right: 15px;
+}
+
+.form__radio-label,
+.form__checkbox-label {
+  padding-left: 46px;
+}
+
+.form__textarea {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    width: $tablet-width;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: $desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .form__header {
+    width: 100%;
+  }
+
+  .form__group1 {
+    width: 570px;
+  }
+
+  .form__group2 {
+    width: 570px;
+  }
+
+  // Дальше у меня почему-то не получается перестроить элементы в строку
+  // а не в столбец и аналогично с .form__group5 - не пойму в чём ошибка...
+  .form__group3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__group3 legend {
+    width: 100%;
+  }
+
+  .form__group3 .form__row {
+    width: 570px;
+  }
+
+  .form__group4 {
+    width: 100%;
+  }
+
+  .form__group5 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .form__group5 legend {
+    width: 100%;
+  }
+
+  .form__group5 .form__row {
+    width: 245px;
+  }
+
+  .form__submit-button {
+    width: 50%;
+  }
 }
