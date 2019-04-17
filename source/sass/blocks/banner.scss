@@ -89,6 +89,12 @@
     padding-top: 144px;
     margin-bottom: 78px;
 
+    background:
+      url("../img/index-background-desktop@1x.jpg") no-repeat 100% 0%,
+      linear-gradient(to right, #ffffff 50%, #65a93c 50%);
+  }
+
+  .banner--desktop {
     background-image: linear-gradient(to right, #ffffff 50%, $theme-color 50%);
   }
 
