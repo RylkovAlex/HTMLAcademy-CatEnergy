@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
 
+  @include center;
   min-height: 65px; //сетка
-  width: 320px;
-  margin: 0 auto;
 
   @include oswald-m;
   font-size: 20px;

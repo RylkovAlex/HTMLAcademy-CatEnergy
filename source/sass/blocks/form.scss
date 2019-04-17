@@ -1,12 +1,7 @@
 .form {
+  @include center;
   display: flex;
   flex-direction: column;
-  width: $mobile-width;
-
-  @include indents-0;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .form__title {

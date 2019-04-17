@@ -1,10 +1,7 @@
 .advantages {
-  width: 320px;
-  min-height: 430px; //сетка
+  @include center;
 
-  @include indents-0;
-  margin: 0 auto;
-  padding: 20px;
+  min-height: 430px; //сетка
 }
 
 .advantages__title {

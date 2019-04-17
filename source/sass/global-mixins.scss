@@ -16,3 +16,11 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin center {
+  width: $mobile-width;
+
+  @include indents-0;
+  margin: 0 auto;
+  padding: 20px;
+}

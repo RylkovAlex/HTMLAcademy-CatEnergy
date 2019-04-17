@@ -1,10 +1,5 @@
 .extra-goods {
-  width: $mobile-width;
-
-  @include indents-0;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  @include center;
   margin-bottom: 39px;
 }
 

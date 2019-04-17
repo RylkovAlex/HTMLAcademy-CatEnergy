@@ -1,9 +1,7 @@
 .contacts {
-  width: 320px;
-  min-height: 480px; //сетка
+  @include center;
 
-  @include indents-0;
-  margin: 0 auto;
+  min-height: 480px; //сетка
 }
 
 .contacts__text-box {

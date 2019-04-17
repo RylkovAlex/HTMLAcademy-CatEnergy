@@ -1,12 +1,9 @@
 .page-footer {
+  @include center;
+
   display: flex;
   flex-direction: column;
-  width: 320px;
   min-height: 235px; //сетка
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-
   background-color: $bg-grey;
 }
 

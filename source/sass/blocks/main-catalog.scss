@@ -1,8 +1,5 @@
 .main-catalog {
-  width: 320px;
-
-  @include indents-0;
-  margin: 0 auto;
+  @include center;
 }
 
 .main-catalog__title {

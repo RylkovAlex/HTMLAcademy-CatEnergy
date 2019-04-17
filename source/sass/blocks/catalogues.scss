@@ -1,11 +1,6 @@
 .catalogues {
-  width: 320px;
+  @include center;
   min-height: 552px; //сетка
-
-  @include indents-0;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .catalogues__list {

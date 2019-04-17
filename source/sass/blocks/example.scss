@@ -1,11 +1,6 @@
 .example {
-  width: 320px;
+  @include center;
   min-height: 705px; //сетка
-
-  @include indents-0;
-  margin: 0 auto;
-  padding: 20px;
-
   background-color: $bg-grey;
 }
 
