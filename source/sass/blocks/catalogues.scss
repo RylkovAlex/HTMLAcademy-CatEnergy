@@ -1,13 +1,37 @@
 .catalogues {
-  @include indents-0;
-  padding-left: 20px;
-  padding-right: 20px;
+  @include center;
+  min-height: 552px; //сетка
 }
 
 .catalogues__list {
   list-style: none;
+
+  @include indents-0;
 }
 
 .catalogues__item {
   position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .catalogues {
+    width: $tablet-width;
+    min-height: 775px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalogues {
+    width: $desktop-width;
+    min-height: 375px; //сетка
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .catalogues__list {
+    display: flex;
+    justify-content: space-between;
+  }
 }

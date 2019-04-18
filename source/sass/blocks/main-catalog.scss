@@ -1,5 +1,5 @@
 .main-catalog {
-  @include indents-0;
+  @include center;
 }
 
 .main-catalog__title {
@@ -24,6 +24,9 @@
 }
 
 .main-catalog__item {
+  display: flex;
+  flex-wrap: wrap;
+
   @include indents-0;
   padding-left: 20px;
   padding-right: 20px;
@@ -31,7 +34,19 @@
   border-bottom: 1px solid $border-grey;
 }
 
-.main-catalog__item-name {
+.main-catalog__item-image {
+  width: 50%;
+}
+
+.main-catalog__item-info {
+  width: 50%;
+}
+
+.main-catalog__button {
+  width: 100%;
+}
+
+.main-catalog__item-name h3 {
   @include indents-0;
   @include oswald-r;
   font-size: 16px;
@@ -40,7 +55,7 @@
   color: $title-color;
 }
 
-.main-catalog__item-image {
+.main-catalog__item-image img {
   display: block;
 }
 
@@ -49,12 +64,89 @@
   line-height: 16px;
 }
 
+.main-catalog__item--show-more {
+  padding-top: 83px;
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid $border-grey;
+}
+
 .main-catalog__show-more-title {
+  @include indents-0;
   @include oswald-r;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: $title-color;
+}
 
-  border-bottom: 1px solid $border-grey;
+.main-catalog__show-more-text {
+  @include indents-0;
+
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+//TABLET:
+@media (min-width: $tablet-width) {
+  .main-catalog {
+    width: $tablet-width;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .main-catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main-catalog__item {
+    align-items: center;
+    width: 324px;
+    min-height: 500px;
+    margin-bottom: 70px;
+
+    background-image: linear-gradient(#ffffff 70px, $bg-grey 70px);
+  }
+
+  .main-catalog__item-image {
+    width: 100%;
+    // margin-top: -30px; когда норм картинки будут
+  }
+
+  .main-catalog__item-info {
+    width: 100%;
+  }
+
+  .main-catalog__item--show-more {
+    background-image: none;
+    border-top: 1px solid $border-grey; //кстати, как её сместить на 70px вниз? или делать псевдоэлементом?
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .main-catalog {
+    width: $desktop-width;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .main-catalog__item {
+    width: 245px;
+    min-height: 555px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-bottom: 40px;
+    margin-bottom: 18px;
+    margin-right: 80px;
+
+    background-image: linear-gradient(to top, $bg-grey 430px, #ffffff 430px);
+  }
+
+  .main-catalog__item:nth-child(4n) { //нормально?
+    margin-right: 0;
+  }
 }

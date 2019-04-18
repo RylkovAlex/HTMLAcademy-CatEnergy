@@ -1,4 +1,6 @@
 .catalog {
+  min-height: 266px; //сетка
+
   @include indents-0;
   padding-left: 21px;
   padding-right: 21px;
@@ -46,4 +48,17 @@
   line-height: 16px;
   color: $title-color;
   text-align: left;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    min-height: 372px; //сетка
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    width: 570px;
+  }
 }

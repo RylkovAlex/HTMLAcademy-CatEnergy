@@ -1,5 +1,6 @@
 .button {
   display: block;
+  width: 100%;
 
   @include indents-0;
   padding-top: 11px;
@@ -14,9 +15,31 @@
   color: #ffffff;
 
   background-color: $theme-color;
+  border: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
 }
 
 .button--show-more {
   background-color: $bg-grey;
   color: $light-black4;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    width: 245px;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 52px; //временно
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

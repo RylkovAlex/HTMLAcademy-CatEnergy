@@ -1,7 +1,6 @@
 .example {
-  @include indents-0;
-  padding: 20px;
-
+  @include center;
+  min-height: 705px; //сетка
   background-color: $bg-grey;
 }
 
@@ -33,4 +32,28 @@
   line-height: 20px;
   text-align: center;
   color: $title-color;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    min-height: 1085px; //сетка
+    width: $tablet-width;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    display: flex;
+    width: $desktop-width;
+    min-height: 680px; //сетка
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .example__text-content,
+  .example__slider {
+    width: 50%;
+  }
 }

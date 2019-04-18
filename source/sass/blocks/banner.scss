@@ -1,7 +1,8 @@
 .banner {
-  padding-top: 29px;
-  padding-right: 38px;
-  padding-left: 38px;
+  @include center;
+  min-height: 504px; //сетка
+
+  padding-top: 26px;
   padding-bottom: 22px;
 
   background:
@@ -11,6 +12,8 @@
 
 .banner__title {
   @include indents-0;
+  margin-bottom: 25px;
+
   @include oswald-r;
   font-size: 36px;
   line-height: 36px;
@@ -21,9 +24,94 @@
 }
 
 .banner__lead {
+  margin-bottom: 28px;
+
   @include oswald-r;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
   color: #ffffff;
+}
+
+.banner__image {
+  display: none;
+}
+// TABLET
+@media (min-width: $tablet-width) {
+  .banner {
+    width: $tablet-width;
+    min-height: 842px; //сетка
+    padding-top: 21px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background: none;
+  }
+
+  .banner__wrapper {
+    position: relative;
+    padding-left: 88px;
+  }
+
+  .banner__title {
+    margin-bottom: 42px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: $title-color;
+  }
+
+  .banner__lead {
+    margin-bottom: 47px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: $title-color;
+  }
+
+  .banner__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+  }
+}
+// DESKTOP
+@media (min-width: $desktop-width) {
+  .banner {
+    width: auto;
+
+    @include indents-0;
+    min-height: 696px; //сетка
+    padding-top: 144px;
+    margin-bottom: 78px;
+
+    background:
+      linear-gradient(to right, #ffffff 50%, transparent 50%),
+      url("../img/index-background-desktop@1x.jpg") no-repeat 100% 0%,
+      linear-gradient(to right, #ffffff 50%, #65a93c 50%);
+  }
+
+  .banner--desktop {
+    background-image: linear-gradient(to right, #ffffff 50%, $theme-color 50%);
+  }
+
+  .banner__wrapper {
+    width: 50%;
+    padding-left: 190px;
+    padding-top: 78px;
+  }
+
+  .banner__image {
+    left: 100%;
+  }
+
+  .banner__lead {
+    margin-bottom: 52px;
+  }
+
+  .banner__button {
+    position: unset;
+  }
 }

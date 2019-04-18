@@ -28,6 +28,7 @@ html {
 
 body {
   @include indents-0;
+  min-width: $mobile-width;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -50,5 +51,5 @@ body {
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: inherit;
 }
