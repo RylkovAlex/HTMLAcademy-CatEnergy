@@ -1,6 +1,8 @@
 .contacts {
   @include center;
-
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
   min-height: 480px; //сетка
 }
 
@@ -35,14 +37,20 @@
 .contacts__map {
   width: 100%;
 }
+
+.contacts__map iframe {
+  display: block;
+}
+
 //TABLET:
 @media (min-width: $tablet-width) {
   .contacts {
-    width: $tablet-width;
     min-height: 597px; //сетка
   }
 
   .contacts__text-box {
+    width: $tablet-width;
+    margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -50,15 +58,19 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
+    min-height: 400px;
+  }
+
+  .contacts__text-box-wrapper {
     position: relative;
     width: $desktop-width;
-    min-height: 400px;
+    margin: 0 auto;
+    padding-left: 40px;
   }
 
   .contacts__text-box {
     position: absolute;
-    top: 95px;
-    left: 40px;
+    top: 65px;
     width: 570px;
   }
 

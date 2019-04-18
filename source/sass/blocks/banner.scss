@@ -48,6 +48,7 @@
   }
 
   .banner__wrapper {
+    position: relative;
     padding-left: 88px;
   }
 
@@ -69,11 +70,10 @@
     color: $title-color;
   }
 
-  .banner__image--mobile {
-    display: none;
-  }
-
   .banner__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     display: block;
   }
 }
@@ -98,17 +98,13 @@
   }
 
   .banner__wrapper {
-    display: flex;
-
-    @include indents-0;
-    width: $desktop-width;
-    margin: 0 auto;
-  }
-
-  .banner__text-box {
     width: 50%;
     padding-left: 190px;
     padding-top: 78px;
+  }
+
+  .banner__image {
+    left: 100%;
   }
 
   .banner__lead {

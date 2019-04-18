@@ -15,7 +15,7 @@
       <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39"
         alt="логотип Cat Energy">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__menu-list">
@@ -290,17 +290,17 @@
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
       <div class="contacts__map">
-        <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта">
+        <!-- <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта">
         <img class="contacts__map-pin" src="img/map-pin.png" width="55" height="53"
-          alt="Местоположение на карте">
+          alt="Местоположение на карте"> -->
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__logo">
+    <a class="page-footer__logo" href="index.html">
       <img class="page-footer__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
-    </div>
+    </a>
     <ul class="page-footer__social-links social-links">
       <li class="social-links__item social-links__item--vk">
         <a href="#">VK</a>
@@ -320,6 +320,9 @@
       </a>
     </div>
   </footer>
+
+  <script src="js/menu.js"></script>
+
 </body>
 
 </html>

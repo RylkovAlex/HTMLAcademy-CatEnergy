@@ -16,6 +16,14 @@
 
   background-color: $theme-color;
   border: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
 }
 
 .button--show-more {
