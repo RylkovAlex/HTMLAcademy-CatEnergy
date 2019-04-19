@@ -35,26 +35,33 @@
   &[href]:hover {
     opacity: 0.8;
   }
-  &[href]:active{
+
+  &[href]:active {
     opacity: 0.6;
   }
 }
 
+//TABLET:
 @media (min-width: $tablet-width) {
   .page-header {
     flex-direction: row;
     justify-content: space-between;
-    min-height: 108px; //сетка
+    min-height: 120px; //сетка
     min-width: $tablet-width;
 
     padding-right: 30px;
     padding-left: 30px;
-    padding-top: 19px;
+    padding-top: 25px;
     padding-bottom: 30px;
   }
 
   .page-header__logo-link {
     @include indents-0;
+  }
+
+  .page-header__logo-img {
+    width: 174px;
+    height: 59px;
   }
 }
 
@@ -70,6 +77,7 @@
 
   .page-header--index {
     position: absolute;
+    z-index: 2;
     left: 50%;
     top: 0;
     transform: translate(-50%);
@@ -80,5 +88,10 @@
 
   .page-header--catalog {
     color: $title-color;
+  }
+
+  .page-header__logo-img {
+    width: 203px;
+    height: 60px;
   }
 }

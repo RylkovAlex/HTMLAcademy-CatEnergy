@@ -12,8 +12,11 @@
 <body>
   <header class="page-header page-header--index">
     <a class="page-header__logo-link">
-      <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39"
-        alt="логотип Cat Energy">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39" alt="логотип Cat Energy">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -34,10 +37,16 @@
   <main class="page-main">
     <section class="banner">
       <div class="banner__wrapper">
-        <h1 class="banner__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
-        <p class="banner__lead">Занялся собой? Займись котом!</p>
-        <img class="banner__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Изображение товара - Функциональное питание для котов">
-        <a class="banner__button button" href="#">Подобрать программу</a>
+        <div class="banner__text-box">
+          <h1 class="banner__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
+          <p class="banner__lead">Занялся собой? Займись котом!</p>
+          <a class="banner__button button" href="#">Подобрать программу</a>
+        </div>
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img class="banner__image" src="img/index-can-mobile@1x.png" alt="Изображение товара - Функциональное питание для котов">
+        </picture>
       </div>
     </section>
 

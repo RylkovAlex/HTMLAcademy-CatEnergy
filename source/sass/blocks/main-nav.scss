@@ -23,6 +23,7 @@
   background-color: transparent;
   border: none;
   outline: none;
+
   &:hover,
   &:active {
     opacity: 0.5;
@@ -39,7 +40,7 @@
 }
 
 .main-nav__item {
-  padding-top: 22px;
+  padding-top: 23px;
   padding-bottom: 23px;
   padding-left: 20px;
   padding-right: 20px;
@@ -62,7 +63,7 @@
 
 .main-nav__item--active a::before {
   position: absolute;
-  top: 35px;
+  top: 33px;
   left: 0;
   content: "";
   width: 100%;
@@ -122,8 +123,10 @@
   }
 
   .main-nav__item {
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 17px;
+    padding-bottom: 20px;
 
     border: none;
   }
@@ -131,9 +134,9 @@
   .main-nav__item:last-child {
     padding-right: 0;
   }
-
 }
 
+//DESKTOP
 @media (min-width: $desktop-width) {
   .main-nav {
     width: 50%;
@@ -146,8 +149,14 @@
   }
 
   .main-nav__menu-list {
-    justify-content: center;
-    padding-left: 113px;
+    justify-content: flex-end;
+    padding-left: 20px;
+  }
+
+  .main-nav__item {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 22px;
   }
 
   .main-nav__item--active a::before {
