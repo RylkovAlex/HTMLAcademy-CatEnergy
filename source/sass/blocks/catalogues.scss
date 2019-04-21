@@ -1,6 +1,7 @@
 .catalogues {
   @include center;
   min-height: 552px; //сетка
+  padding-bottom: 15px;
 }
 
 .catalogues__list {
@@ -10,7 +11,10 @@
 }
 
 .catalogues__item {
-  position: relative;
+  margin-bottom: 20px;
+}
+.catalogues__item:last-child {
+  margin-bottom: 0px;
 }
 
 @media (min-width: $tablet-width) {

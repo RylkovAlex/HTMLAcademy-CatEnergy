@@ -2,11 +2,12 @@
   @include center;
 
   min-height: 430px; //сетка
+  padding-bottom: 20px;
 }
 
 .advantages__title {
   @include indents-0;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 
   @include oswald-r;
   font-size: 36px;
@@ -21,15 +22,56 @@
   list-style: none;
 }
 
+.advantages__item {
+  position: relative;
+
+  min-height: 60px; //сетка
+  margin-bottom: 20px;
+}
+
+.advantages__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: $theme-color;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.advantages__item--eco::before {
+  background-image: url(../img/advantage-leaf@1x.png);
+}
+
+.advantages__item--powder::before {
+  background-image: url(../img/advantage-powder@1x.png);
+}
+
+.advantages__item--meal::before {
+  background-image: url(../img/advantage-dining@1x.png);
+}
+
+.advantages__item--time::before {
+  background-image: url(../img/advantage-clock@1x.png);
+}
+
 .advantages__description {
+  @include indents-0;
+  padding-top: 2px;
+  padding-bottom: 2px;
   padding-left: 80px;
 }
 
+//TABLET:
 @media (min-width: $tablet-width) {
   .advantages {
     width: $tablet-width;
     min-height: 780px; //сетка
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 8px;
   }
 
   .advantages__title {
@@ -47,17 +89,36 @@
   }
 
   .advantages__item {
-    width: 50%;
-    min-height: 285px; //сетка
+    width: 324px;
+    min-height: 319px; //сетка
+    padding-top: 155px;
+    margin-bottom: 0px;
+  }
+
+  .advantages__item::before {
+    top: 45px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .advantages__description {
+    width: 250px;
+    padding-left: 0px;
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
+//DESKTOP:
 @media (min-width: $desktop-width) {
   .advantages {
     width: $desktop-width;
     min-height: 360px; //сетка
     padding-left: 40px;
     padding-right: 40px;
+    padding-top: 60px;
   }
 
   .advantages__item {

@@ -1,10 +1,12 @@
 .example {
   @include center;
   min-height: 705px; //сетка
+  padding-top: 16px;
   background-color: $bg-grey;
 }
 
 .example__title {
+  @include indents-0;
   @include oswald-r;
   font-size: 36px;
   line-height: 60px;
