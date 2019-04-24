@@ -1,4 +1,8 @@
 .extra-goods {
+  overflow-x: hidden; //для зелёных полосок
+}
+
+.extra-goods__wrapper {
   @include center;
   margin-bottom: 35px;
 }
@@ -87,7 +91,7 @@
 
 //---------------------------------TABLET:
 @media (min-width: $tablet-width) {
-  .extra-goods {
+  .extra-goods__wrapper {
     max-width: $tablet-width;
     width: 100%;
 
@@ -96,14 +100,18 @@
     margin-bottom: 75px;
   }
 
+  .extra-goods__heading-box {
+    display: flex;
+  }
+
   .extra-goods__heading {
     position: relative;
-    display: flex;
-
-    width: 450px;
+    width: auto;
     padding-top: 18px;
+    padding-bottom: 18px;
     padding-left: 37px;
-    margin-bottom: 48px;
+    padding-right: 37px;
+    margin-bottom: 63px;
 
     font-size: 36px;
     line-height: 36px;
@@ -115,27 +123,21 @@
     margin-bottom: 70px;
   }
 
-  // .extra-goods__heading::before {
-  //   position: absolute;
-  //   top: 46%;
-  //   right: 453px;
-
-  //   content: "";
-  //   width: 50vw;
-  //   height: 3px;
-  //   background-color: $theme-color;
-  // }
-
+  .extra-goods__heading::before,
   .extra-goods__heading::after {
     position: absolute;
-    top: 46%;
-    left: 410px;
+    top: 55%;
+    right: 100%;
+    display: block;
 
     content: "";
-    min-width: 20px;
-    flex-grow: 1;
+    width: 100vw;
     height: 3px;
     background-color: $theme-color;
+  }
+
+  .extra-goods__heading::after {
+    left: 100%;
   }
 
   .extra-goods__item {
@@ -185,7 +187,7 @@
 
 //---------------------------------DESKTOP:
 @media (min-width: $desktop-width) {
-  .extra-goods {
+  .extra-goods__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -203,13 +205,12 @@
   }
 
   .extra-goods__heading::before {
-    top: 50%;
-    right: 490px;
+    top: 60%;
+    right: calc(100% + 40px);
   }
 
   .extra-goods__heading::after {
-    top: 50%;
-    left: 373px;
+    top: 60%;
   }
 
   .extra-goods__table {
