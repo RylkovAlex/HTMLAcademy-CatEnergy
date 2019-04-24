@@ -96,7 +96,9 @@
 
 @media (min-width: $tablet-width) {
   .form {
-    width: $tablet-width;
+    max-width: $tablet-width;
+    width: 100%;
+
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -108,7 +110,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    width: $desktop-width;
+    max-width: $desktop-width;
+    width: 100%;
+
     padding-left: 40px;
     padding-right: 40px;
   }

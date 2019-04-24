@@ -3,15 +3,16 @@
   width: 100%;
   padding-left: 0;
   padding-right: 0;
-  min-height: 480px; //сетка
+  min-height: 475px; //сетка
+  outline: 1px solid green;
 }
 
 .contacts__text-box {
   display: flex;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 31px;
-  padding-bottom: 26px;
+
+  @include center;
+  padding-top: 15px;
+  padding-bottom: 13px;
 
   background-color: #ffffff;
 }
@@ -45,25 +46,37 @@
 //TABLET:
 @media (min-width: $tablet-width) {
   .contacts {
+    outline: 1px solid green;
     min-height: 597px; //сетка
   }
 
   .contacts__text-box {
-    width: $tablet-width;
-    margin: 0 auto;
-    padding-left: 30px;
+    max-width: $tablet-width;
+    width: 100%;
+    min-height: 400px;
+
+    padding-top: 48px;
+    padding-left: 72px;
     padding-right: 30px;
+    margin: 0 auto;
+  }
+
+  .contacts__title {
+    width: 160px;
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
-    min-height: 400px;
+    min-height: 400px; //сетка
   }
 
   .contacts__text-box-wrapper {
     position: relative;
-    width: $desktop-width;
+    max-width: $desktop-width;
+    width: 100%;
     margin: 0 auto;
     padding-left: 40px;
   }
@@ -72,9 +85,10 @@
     position: absolute;
     top: 65px;
     width: 570px;
+    min-height: 50%; //сетка
   }
 
-  .contacts__text-box--grey { //наверное, не совсем правильно... как ещё там можно цвет переопределить?
+  .contacts__text-box--grey {
     background-color: #ffffff;
   }
 }

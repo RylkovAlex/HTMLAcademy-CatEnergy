@@ -39,7 +39,9 @@
 @media (min-width: $tablet-width) {
   .example {
     min-height: 1085px; //сетка
-    width: $tablet-width;
+    max-width: $tablet-width;
+    width: 100%;
+
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -48,7 +50,9 @@
 @media (min-width: $desktop-width) {
   .example {
     display: flex;
-    width: $desktop-width;
+    max-width: $desktop-width;
+    width: 100%;
+
     min-height: 680px; //сетка
     padding-left: 40px;
     padding-right: 40px;

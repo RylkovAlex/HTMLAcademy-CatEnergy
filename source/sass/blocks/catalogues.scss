@@ -13,13 +13,16 @@
 .catalogues__item {
   margin-bottom: 20px;
 }
+
 .catalogues__item:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 @media (min-width: $tablet-width) {
   .catalogues {
-    width: $tablet-width;
+    max-width: $tablet-width;
+    width: 100%;
+
     min-height: 775px;
     padding-left: 30px;
     padding-right: 30px;
@@ -28,7 +31,9 @@
 
 @media (min-width: $desktop-width) {
   .catalogues {
-    width: $desktop-width;
+    max-width: $desktop-width;
+    width: 100%;
+
     min-height: 375px; //сетка
     padding-left: 40px;
     padding-right: 40px;

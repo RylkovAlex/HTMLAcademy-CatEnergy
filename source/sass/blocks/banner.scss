@@ -51,7 +51,8 @@
 // TABLET
 @media (min-width: $tablet-width) {
   .banner {
-    width: $tablet-width;
+    max-width: $tablet-width;
+    width: 100%;
     min-height: 842px; //сетка
     padding-top: 21px;
     padding-right: 30px;
@@ -90,8 +91,7 @@
   .banner__button {
     position: unset;
     width: 245px;
-    height: 52px; //временно
-
+    height: 52px;
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -100,6 +100,7 @@
 // DESKTOP
 @media (min-width: $desktop-width) {
   .banner {
+    max-width: none;
     width: auto;
     min-height: 696px; //сетка
     margin-bottom: 78px;
@@ -111,7 +112,9 @@
   }
 
   .banner__wrapper {
-    width: $desktop-width;
+    max-width: $desktop-width;
+    width: 100%;
+
     margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;

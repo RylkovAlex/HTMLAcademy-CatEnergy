@@ -47,7 +47,8 @@
     flex-direction: row;
     justify-content: space-between;
     min-height: 120px; //сетка
-    min-width: $tablet-width;
+    max-width: $tablet-width;
+    width: 100%;
 
     padding-right: 30px;
     padding-left: 30px;
@@ -72,7 +73,8 @@
     padding-top: 52px;
 
     min-height: 180px; //сетка
-    width: $desktop-width;
+    max-width: $desktop-width;
+    width: 100%;
   }
 
   .page-header--index {
