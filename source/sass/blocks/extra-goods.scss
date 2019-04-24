@@ -98,6 +98,7 @@
 
   .extra-goods__heading {
     position: relative;
+    display: flex;
 
     width: 450px;
     padding-top: 18px;
@@ -114,16 +115,16 @@
     margin-bottom: 70px;
   }
 
-  .extra-goods__heading::before {
-    position: absolute;
-    top: 46%;
-    right: 453px;
+  // .extra-goods__heading::before {
+  //   position: absolute;
+  //   top: 46%;
+  //   right: 453px;
 
-    content: "";
-    width: 50vw;
-    height: 3px;
-    background-color: $theme-color;
-  }
+  //   content: "";
+  //   width: 50vw;
+  //   height: 3px;
+  //   background-color: $theme-color;
+  // }
 
   .extra-goods__heading::after {
     position: absolute;
@@ -131,7 +132,8 @@
     left: 410px;
 
     content: "";
-    width: 100vw;
+    min-width: 20px;
+    flex-grow: 1;
     height: 3px;
     background-color: $theme-color;
   }
