@@ -112,19 +112,8 @@
     font-size: 281px;
     line-height: 281px;
     color: $bg-grey;
-    content: "1";
-  }
-
-  .advantages__item--powder::after {
-    content: "2";
-  }
-
-  .advantages__item--meal::after {
-    content: "3";
-  }
-
-  .advantages__item--time::after {
-    content: "4";
+    counter-increment: section;
+    content: counter(section);
   }
 
   .advantages__description {

@@ -1,14 +1,19 @@
 .page-footer {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $bg-grey;
+}
+
+.page-footer-wrapper {
   @include center;
 
   display: flex;
   flex-direction: column;
   min-height: 242px; //сетка
-  background-color: $bg-grey;
 }
 
 .page-footer__logo {
-  padding-top: 40px;
+  padding-top: 35px;
   padding-bottom: 32px;
   margin: 0 auto;
 }
@@ -39,7 +44,7 @@
 
 //---------------------------------TABLET:
 @media (min-width: $tablet-width) {
-  .page-footer {
+  .page-footer-wrapper {
     max-width: $tablet-width;
     width: 100%;
 
@@ -49,7 +54,7 @@
 
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 55px;
+    padding-top: 50px;
     padding-bottom: 55px;
   }
 
@@ -81,7 +86,7 @@
 
 //---------------------------------DESKTOP:
 @media (min-width: $desktop-width) {
-  .page-footer {
+  .page-footer-wrapper {
     max-width: $desktop-width;
     width: 100%;
 
