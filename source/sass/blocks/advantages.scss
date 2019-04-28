@@ -64,15 +64,17 @@
   padding-left: 80px;
 }
 
-//TABLET:
+//---------------------------------TABLET:
 @media (min-width: $tablet-width) {
   .advantages {
     max-width: $tablet-width;
     width: 100%;
-    min-height: 780px; //сетка
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 8px;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-grey;
   }
 
   .advantages__title {
@@ -85,7 +87,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-
     min-height: 600px;
   }
 
@@ -126,7 +127,7 @@
   }
 }
 
-//DESKTOP:
+//----------------------------------DESKTOP:
 @media (min-width: $desktop-width) {
   .advantages {
     max-width: $desktop-width;
@@ -135,6 +136,8 @@
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 60px;
+    padding-bottom: 0;
+    border-bottom: none;
   }
 
   .advantages__item {
