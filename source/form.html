@@ -21,13 +21,13 @@
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__menu-list">
-          <li class="main-nav__item main-nav__item--active">
+          <li class="main-nav__item">
             <a href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--active">
             <a>Подбор программы</a>
           </li>
         </ul>
@@ -36,88 +36,90 @@
   </header>
 
   <main class="page-main">
-    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-      <header class="form__header">
-        <h1 class="form__title">Подбор программы</h1>
-        <b class="form__lead">Заполните анкету и мы подберем программу питания для вашего кота</b>
-      </header>
+    <div class="form__wrapper">
+      <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+        <header class="form__header">
+          <h1 class="form__title">Подбор программы</h1>
+          <b class="form__lead">Заполните анкету и мы подберем программу питания для вашего кота</b>
+        </header>
 
-      <fieldset class="form__group1">
-        <div class="form__row">
-          <label class="form__text-label" for="pet-name">Имя:*</label>
-          <input class="form__text-input" type="text" id="pet-name" name="pet-name" value="" placeholder="Барсик"
-            required>
-        </div>
-        <div class="form__row">
-          <label class="form__text-label" for="pet-weight">Вес (кг):*</label>
-          <input class="form__text-input" type="text" id="pet-weight" name="pet-weight" value="" placeholder="7"
-            required>
-        </div>
-        <div class="form__row">
-          <label class="form__text-label" for="pet-age">Возраст (лет):</label>
-          <input class="form__text-input" type="text" id="pet-age" name="pet-age" value="" placeholder="7">
-        </div>
-      </fieldset>
+        <fieldset class="form__group1">
+          <div class="form__row">
+            <label class="form__text-label" for="pet-name">Имя:*</label>
+            <input class="form__text-input" type="text" id="pet-name" name="pet-name" value="" placeholder="Барсик"
+              required>
+          </div>
+          <div class="form__row">
+            <label class="form__text-label" for="pet-weight">Вес (кг):*</label>
+            <input class="form__text-input" type="text" id="pet-weight" name="pet-weight" value="" placeholder="7"
+              required>
+          </div>
+          <div class="form__row">
+            <label class="form__text-label" for="pet-age">Возраст (лет):</label>
+            <input class="form__text-input" type="text" id="pet-age" name="pet-age" value="" placeholder="7">
+          </div>
+        </fieldset>
 
-      <fieldset class="form__group2">
-        <div class="form__row">
-          <input class="form__radio-input visually-hidden" type="radio" name="program" id="slim" value="slim" checked>
-          <label class="form__radio-label" for="slim">Похудение</label>
-        </div>
-        <div class="form__row">
-          <input class="form__radio-input visually-hidden" type="radio" name="program" id="pro" value="pro">
-          <label class="form__radio-label" for="pro">Набор массы</label>
-        </div>
-        <div class="form__row">
-          <input class="form__radio-input visually-hidden" type="radio" name="program" id="help" value="help">
-          <label class="form__radio-label" for="help">Не знаю (нужен Ваш совет)</label>
-        </div>
-      </fieldset>
+        <fieldset class="form__group2">
+          <div class="form__row">
+            <input class="form__radio-input visually-hidden" type="radio" name="program" id="slim" value="slim" checked>
+            <label class="form__radio-label" for="slim">Похудение</label>
+          </div>
+          <div class="form__row">
+            <input class="form__radio-input visually-hidden" type="radio" name="program" id="pro" value="pro">
+            <label class="form__radio-label" for="pro">Набор массы</label>
+          </div>
+          <div class="form__row">
+            <input class="form__radio-input visually-hidden" type="radio" name="program" id="help" value="help">
+            <label class="form__radio-label" for="help">Не знаю (нужен Ваш совет)</label>
+          </div>
+        </fieldset>
 
-      <fieldset class="form__group3">
-        <legend class="form__legend">Контактные данные (владельца кота)</legend>
-        <div class="form__row">
-          <label class="form__text-label" for="e-mail">E-Mail:</label>
-          <input class="form__text-input form__text-input--email" type="text" id="e-mail" name="e-mail" value=""
-            placeholder="kuklachev@gmail.com" required>
-        </div>
-        <div class="form__row">
-          <label class="form__text-label" for="phone">Телефон:</label>
-          <input class="form__text-input form__text-input--phone" type="text" id="phone" name="phone" value=""
-            placeholder="8 (960) 900-60-90" required>
-        </div>
-      </fieldset>
+        <fieldset class="form__group3">
+          <legend class="form__legend form__group3-legend">Контактные данные (владельца кота)</legend>
+          <div class="form__row">
+            <label class="form__text-label" for="e-mail">E-Mail:</label>
+            <input class="form__text-input form__text-input--email" type="text" id="e-mail" name="e-mail" value=""
+              placeholder="kuklachev@gmail.com" required>
+          </div>
+          <div class="form__row">
+            <label class="form__text-label" for="phone">Телефон:</label>
+            <input class="form__text-input form__text-input--phone" type="text" id="phone" name="phone" value=""
+              placeholder="8 (960) 900-60-90" required>
+          </div>
+        </fieldset>
 
-      <fieldset class="form__group4">
-        <legend class="form__legend">Комментарий</legend>
-        <textarea class="form__textarea" name="comment" rows="5"
-          placeholder="Расскажите обо всех повадках кота"></textarea>
-      </fieldset>
+        <fieldset class="form__group4">
+          <legend class="form__legend form__group4-legend">Комментарий</legend>
+          <textarea class="form__textarea" name="comment" rows="8"
+            placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
 
-      <fieldset class="form__group5">
-        <legend class="form__legend">Дополнительно</legend>
-        <div class="form__row">
-          <input class="visually-hidden form__checkbox-input" id="sugar-free" type="checkbox" name="sugar-free"
-            value="sugar-free" checked>
-          <label class="form__checkbox-label" for="sugar-free">Сахорозаменитель</label>
-        </div>
-        <div class="form__row">
-          <input class="visually-hidden form__checkbox-input" id="water" type="checkbox" name="water" value="water">
-          <label class="form__checkbox-label" for="water">Питьевая вода</label>
-        </div>
-        <div class="form__row">
-          <input class="visually-hidden form__checkbox-input" id="milk" type="checkbox" name="milk" value="milk">
-          <label class="form__checkbox-label" for="milk">Молоко</label>
-        </div>
-        <div class="form__row">
-          <input class="visually-hidden form__checkbox" id="vitamins" type="checkbox" name="vitamins" value="vitamins">
-          <label class="form__checkbox-label" for="vitamins">Витамины</label>
-        </div>
-      </fieldset>
+        <fieldset class="form__group5">
+          <legend class="form__legend form__group5-legend">Дополнительно</legend>
+          <div class="form__row">
+            <input class="visually-hidden form__checkbox-input" id="sugar-free" type="checkbox" name="sugar-free"
+              value="sugar-free" checked>
+            <label class="form__checkbox-label" for="sugar-free">Сахарозаменитель</label>
+          </div>
+          <div class="form__row">
+            <input class="visually-hidden form__checkbox-input" id="water" type="checkbox" name="water" value="water">
+            <label class="form__checkbox-label" for="water">Питьевая вода</label>
+          </div>
+          <div class="form__row">
+            <input class="visually-hidden form__checkbox-input" id="milk" type="checkbox" name="milk" value="milk">
+            <label class="form__checkbox-label" for="milk">Молоко</label>
+          </div>
+          <div class="form__row">
+            <input class="visually-hidden form__checkbox" id="vitamins" type="checkbox" name="vitamins" value="vitamins">
+            <label class="form__checkbox-label" for="vitamins">Витамины</label>
+          </div>
+        </fieldset>
 
-      <button type="submit" class="form__submit-button button">Отправить Заявку</button>
-      <small class="form__explanation">* — Обязательные поля</small>
-    </form>
+        <button type="submit" class="form__submit-button button">Отправить Заявку</button>
+        <small class="form__explanation">* — Обязательные поля</small>
+      </form>
+    </div>
 
     <section class="contacts">
       <div class="contacts__text-box-wrapper contacts__text-box-wrapper--grey">
@@ -129,38 +131,60 @@
           </div>
         </div>
       </div>
-      <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1555494369114!5m2!1sru!2sru" width="100%" height="365" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <div class="contacts__map-pin"></div>
+      <div class="contacts__map" id="map">
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1555494369114!5m2!1sru!2sru" width="100%" height="365" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+        <!-- <div class="contacts__map-pin"></div> -->
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__logo" href="index.html">
-      <img class="page-footer__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
-    </a>
-    <ul class="page-footer__social-links social-links">
-      <li class="social-links__item social-links__item--vk">
-        <a href="#">VK</a>
-      </li>
-      <li class="social-links__item social-links__item--inst">
-        <a href="#">Instagram</a>
-      </li>
-      <li class="social-links__item social-links__item--fb">
-        <a href="#">Facebook</a>
-      </li>
-    </ul>
-    <div class="page-footer__copyright">
-      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <a class="page-footer__copyright-image" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="page-footer__copyright-icon" src="img/htmlacademy.svg" width="27" height="34"
-          alt="логотип академии">
+    <div class="page-footer-wrapper">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
+      <ul class="page-footer__social-links social-links">
+        <li class="social-links__item social-links__item--vk">
+          <a href="#">VK</a>
+        </li>
+        <li class="social-links__item social-links__item--inst">
+          <a href="#">Instagram</a>
+        </li>
+        <li class="social-links__item social-links__item--fb">
+          <a href="#">Facebook</a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__copyright-image" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="page-footer__copyright-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34">
+            <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
+        </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
   <script src="js/menu.js"></script>
+
+  <script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: {lat: 59.939048, lng: 30.3189848}
+        });
+
+        var image = 'img/map-pin.png';
+        var beachMarker = new google.maps.Marker({
+          position: {lat: 59.938738, lng: 30.323059},
+          map: map,
+          icon: image
+        });
+      }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO_gNhKCxAO2joblO1qfuEcD_zxeC5hbE&callback=initMap">
+  </script>
 
 </body>
 

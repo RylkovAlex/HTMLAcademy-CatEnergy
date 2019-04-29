@@ -1,11 +1,22 @@
-.form {
-  @include center;
-  display: flex;
-  flex-direction: column;
+.form__wrapper {
+  width: 100%;
+  overflow: hidden; // для зелёныз полос
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  @include center;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 32px;
+}
+
+// ------------------ Типографика:
 .form__title {
   @include indents-0;
+  margin-bottom: 26px;
+
   @include oswald-r;
   font-size: 36px;
   line-height: 60px;
@@ -15,7 +26,12 @@
 }
 
 .form__lead {
+  display: block;
+  width: 230px;
+
   @include indents-0;
+  margin-bottom: 14px;
+
   @include oswald-r;
   font-size: 14px;
   line-height: 18px;
@@ -24,11 +40,17 @@
 }
 
 .form__legend {
+  position: relative;
+  display: flex;
+
   @include indents-0;
+  margin-bottom: 33px;
+
   @include oswald-r;
   font-size: 24px;
   line-height: 24px;
   text-align: left;
+  text-transform: none;
   color: $title-color;
 }
 
@@ -59,41 +81,205 @@
   color: $light-black4;
 }
 
-//--------------
+// ------------------ Сетка и прочее:
+.form__header {
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
 
 .form__row input,
 .form__row label {
   display: block;
 }
 
-.form fieldset {
+.form__group1 {
   @include indents-0;
-  padding-top: 29px;
-  padding-bottom: 26px;
-  border: none;
-}
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 8px;
 
-.form__row {
-  display: flex;
+  border: none;
 }
 
 .form__text-input {
   flex-grow: 1;
+  height: 45px;
+
+  padding-left: 12px;
 }
 
 .form__text-label {
   margin-right: 15px;
 }
 
-.form__radio-label,
-.form__checkbox-label {
-  padding-left: 46px;
+.form__group2 {
+  @include indents-0;
+  padding-top: 27px;
+  margin-bottom: 30px;
+
+  border: 1px solid green;
+}
+
+.form__radio-label {
+  position: relative;
+
+  padding-left: 64px;
+  margin-bottom: 11px;
+}
+
+.form__radio-label::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 19px;
+
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+.form__radio-input:checked + .form__radio-label::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 28px;
+
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: $theme-color;
+  border-radius: 50%;
+}
+
+.form__group3 {
+  @include indents-0;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 13px;
+  border: none;
+}
+
+.form__group3-legend {
+  width: 200px;
+}
+
+.form__legend::after {
+  position: absolute;
+  top: 28%;
+  left: 100%;
+  display: block;
+
+  content: "";
+  width: 100vw;
+  height: 3px;
+  background-color: $theme-color;
+}
+
+.form__text-input--email,
+.form__text-input--phone {
+  padding-left: 16px;
+  padding-right: 35px;
+}
+
+.form__group4 {
+  @include indents-0;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 24px;
+
+  border: none;
+}
+
+.form__group4-legend {
+  width: auto;
+
+  padding-right: 22px;
+  margin-bottom: 36px;
+}
+
+.form__group4-legend::after {
+  top: 63%;
 }
 
 .form__textarea {
   width: 100%;
+  min-height: 150px;
+
+  padding-top: 13px;
+  padding-left: 14px;
+  padding-right: 12px;
+
+  border: 1px solid green;
 }
 
+.form__group5 {
+  @include indents-0;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 15px;
+
+  border: none;
+}
+
+.form__group5-legend {
+  width: auto;
+
+  padding-right: 25px;
+  margin-bottom: 40px;
+}
+
+.form__group5-legend::after {
+  top: 58%;
+}
+
+.form__checkbox-label {
+  position: relative;
+  padding-left: 46px;
+  margin-bottom: 11px;
+}
+
+.form__checkbox-label::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+}
+
+.form__checkbox-input:checked + .form__checkbox-label::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+
+  content: "";
+  width: 22px;
+  height: 17px;
+  background-image: url("../img/icon-tick.svg");
+}
+
+.form__submit-button {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+// --------------------------------TABLET:
 @media (min-width: $tablet-width) {
   .form {
     max-width: $tablet-width;
