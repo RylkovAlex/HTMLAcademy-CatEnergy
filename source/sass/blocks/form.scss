@@ -6,6 +6,7 @@
 .form {
   display: flex;
   flex-direction: column;
+
   @include center;
   padding-left: 0;
   padding-right: 0;
@@ -115,6 +116,11 @@
   height: 45px;
 
   padding-left: 12px;
+  border: 1px solid #cdcdcd;
+}
+
+.form__text-input:active {
+  border: solid 2px #444444;
 }
 
 .form__text-label {
@@ -147,6 +153,15 @@
   height: 30px;
   border: 1px solid #cdcdcd;
   border-radius: 50%;
+}
+
+.form__radio-label:hover::before {
+  border-color: #bababa;
+}
+
+.form__radio-label:active::before,
+.form__radio-label:active {
+  opacity: 0.3;
 }
 
 .form__radio-input:checked + .form__radio-label::after {
@@ -261,6 +276,14 @@
   border: 1px solid #cdcdcd;
 }
 
+.form__checkbox-label:hover::before {
+  border-color: #bababa;
+}
+
+.form__checkbox-label:active {
+  opacity: 0.3;
+}
+
 .form__checkbox-input:checked + .form__checkbox-label::after {
   position: absolute;
   top: 50%;
@@ -287,9 +310,210 @@
 
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 72px;
+  }
+
+  .form__header {
+    padding: 0;
+    padding-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  .form__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 55px;
+  }
+
+  .form__lead {
+    width: 375px;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__text-label,
+  .form__text-input,
+  .form__text-input::placeholder,
+  .form__radio-label,
+  .form__checkbox-label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__legend {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .form__legend::after {
+    top: 60%;
+  }
+
+  .form__legend::before {
+    position: absolute;
+    top: 60%;
+    right: calc(100% + 40px);
+    display: block;
+
+    content: "";
+    width: 100vw;
+    height: 3px;
+    background-color: $theme-color;
+  }
+
+  .form__group1 {
+    padding-left: 41px;
+    padding-right: 36px;
+    padding-top: 26px;
+    padding-bottom: 0;
+    margin-bottom: 52px;
+  }
+
+  .form__group1 .form__row {
+    margin-bottom: 20px;
+  }
+
+  .form__text-input {
+    min-height: 52px;
+    padding-left: 19px;
+  }
+
+  .form__group2 {
+    margin-left: 40px;
+    margin-right: 36px;
+    padding-top: 34px;
+    margin-bottom: 74px;
+  }
+
+  .form__radio-label {
+    padding-left: 87px;
+    margin-bottom: 20px;
+  }
+
+  .form__radio-label::before {
+    left: 28px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__radio-input:checked + .form__radio-label::after {
+    left: 39px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  .form__group3 {
+    padding-left: 40px;
+    padding-right: 35px;
+    margin-bottom: 46px;
+  }
+
+  .form__group3-legend {
+    width: auto;
+    padding-right: 41px;
+    margin-bottom: 75px;
+  }
+
+  .form__group3 .form__row {
+    margin-bottom: 20px;
+  }
+
+  .form__text-label--email {
+    margin-right: 28px;
+  }
+
+  .form__text-label--phone {
+    margin-right: 23px;
+  }
+
+  .form__group4 {
+    padding-left: 40px;
+    padding-right: 37px;
+    margin-bottom: 61px;
+  }
+
+  .form__group4-legend {
+    padding-right: 40px;
+    margin-bottom: 77px;
+  }
+
+  .form__textarea::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__textarea {
+    min-height: 173px;
+    padding-top: 9px;
+    padding-left: 18px;
+  }
+
+  .form__group5 {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .form__group5-legend {
+    padding-right: 40px;
+    margin-bottom: 66px;
+  }
+
+  .form__group5-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -2px;
+  }
+
+  .form__group5 .form__row {
+    width: 40%;
+    margin-bottom: 41px;
+  }
+
+  .form__group5 .form__row:nth-child(2n - 1) {
+    margin-right: 92px;
+  }
+
+  .form__checkbox-label {
+    padding-left: 59px;
+  }
+
+  .form__checkbox-label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__checkbox-input:checked + .form__checkbox-label::after {
+    left: 10px;
+  }
+
+  .form__submit-box {
+    display: flex;
+    align-items: center;
+
+    padding-left: 41px;
+    padding-right: 40px;
+  }
+
+  .form__submit-button {
+    width: 283px;
+    height: 52px;
+    margin: 0;
+    margin-right: 62px;
+  }
+
+  .form__explanation {
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
+// --------------------------------Desktop:
 @media (min-width: $desktop-width) {
   .form {
     flex-direction: row;
@@ -301,58 +525,92 @@
 
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 82px;
   }
 
   .form__header {
     width: 100%;
+    padding-top: 8px;
+    margin-bottom: 52px;
+  }
+
+  .form__lead {
+    padding-left: 0;
   }
 
   .form__group1 {
     width: 570px;
+    padding: 0;
+    margin-bottom: 0;
   }
 
   .form__group2 {
     width: 570px;
+    margin: 0;
+    padding: 0;
+    padding-top: 34px;
+    margin-bottom: 67px;
   }
 
-  // Дальше у меня почему-то не получается перестроить элементы в строку
-  // а не в столбец и аналогично с .form__group5 - не пойму в чём ошибка...
   .form__group3 {
+    padding: 0;
+    margin-bottom: 48px;
+  }
+
+  .form__group3-box {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
 
-  .form__group3 legend {
-    width: 100%;
+    padding: 0;
   }
 
   .form__group3 .form__row {
     width: 570px;
   }
 
+  .form__group3 .form__row:nth-child(2n -1) {
+    margin-right: 79px;
+  }
+
   .form__group4 {
     width: 100%;
+    padding: 0;
+    margin-bottom: 63px;
   }
 
   .form__group5 {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 0;
   }
 
-  .form__group5 legend {
-    width: 100%;
+  .form__group5-box {
+    margin-bottom: 46px;
+  }
+
+  .form__group5 .form__row:nth-child(2n - 1) {
+    margin-right: 40px;
   }
 
   .form__group5 .form__row {
+    width: 285px;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+
+  .form__group5 .form__row:last-child {
     width: 245px;
+    margin-right: 0;
+  }
+
+  .form__submit-box {
+    padding: 0;
   }
 
   .form__submit-button {
-    width: 50%;
+    width: 568px;
+    margin-right: 84px;
   }
 }

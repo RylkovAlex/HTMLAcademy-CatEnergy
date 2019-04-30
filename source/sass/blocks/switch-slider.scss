@@ -5,6 +5,8 @@
 }
 
 .switch-slider__slide-title {
+  position: relative;
+
   @include oswald-r;
   font-size: 16px;
   line-height: 20px;
@@ -32,10 +34,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.switch-slider__slide-title {
-  position: relative;
 }
 
 .switch-slider__slide-title--before {
@@ -97,7 +95,7 @@
   .switch-slider__slide-title::before {
     position: absolute;
     top: 25px;
-    left: 0px;
+    left: 0;
 
     content: "";
     width: 100%;
@@ -144,7 +142,6 @@
     border-radius: 50%;
     background-color: $theme-color;
   }
-
 }
 
 @media (min-width: $desktop-width) {
@@ -152,9 +149,8 @@
     width: 690px;
 
     background:
-    linear-gradient(to bottom, #ffffff 171px, transparent 171px),
-    linear-gradient(to left, #eaeaea 47%, #f2f2f2 47%);
-    // linear-gradient(to top, $bg-grey 462px, #ffffff 462px);
+      linear-gradient(to bottom, #ffffff 171px, transparent 171px),
+      linear-gradient(to left, #eaeaea 47%, #f2f2f2 47%);
   }
 
   .switch-slider__image {

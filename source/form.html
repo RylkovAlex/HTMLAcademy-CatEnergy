@@ -14,8 +14,11 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo-link" href="index.html">
-      <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39"
-        alt="логотип Cat Energy">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39" alt="логотип Cat Energy">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -77,15 +80,17 @@
 
         <fieldset class="form__group3">
           <legend class="form__legend form__group3-legend">Контактные данные (владельца кота)</legend>
-          <div class="form__row">
-            <label class="form__text-label" for="e-mail">E-Mail:</label>
-            <input class="form__text-input form__text-input--email" type="text" id="e-mail" name="e-mail" value=""
-              placeholder="kuklachev@gmail.com" required>
-          </div>
-          <div class="form__row">
-            <label class="form__text-label" for="phone">Телефон:</label>
-            <input class="form__text-input form__text-input--phone" type="text" id="phone" name="phone" value=""
-              placeholder="8 (960) 900-60-90" required>
+          <div class="form__group3-box">
+            <div class="form__row">
+              <label class="form__text-label form__text-label--email" for="e-mail">E-Mail:</label>
+              <input class="form__text-input form__text-input--email" type="text" id="e-mail" name="e-mail" value=""
+                placeholder="kuklachev@gmail.com" required>
+            </div>
+            <div class="form__row">
+              <label class="form__text-label form__text-label--phone" for="phone">Телефон:</label>
+              <input class="form__text-input form__text-input--phone" type="text" id="phone" name="phone" value=""
+                placeholder="8 (960) 900-60-90" required>
+            </div>
           </div>
         </fieldset>
 
@@ -97,27 +102,31 @@
 
         <fieldset class="form__group5">
           <legend class="form__legend form__group5-legend">Дополнительно</legend>
-          <div class="form__row">
-            <input class="visually-hidden form__checkbox-input" id="sugar-free" type="checkbox" name="sugar-free"
-              value="sugar-free" checked>
-            <label class="form__checkbox-label" for="sugar-free">Сахарозаменитель</label>
-          </div>
-          <div class="form__row">
-            <input class="visually-hidden form__checkbox-input" id="water" type="checkbox" name="water" value="water">
-            <label class="form__checkbox-label" for="water">Питьевая вода</label>
-          </div>
-          <div class="form__row">
-            <input class="visually-hidden form__checkbox-input" id="milk" type="checkbox" name="milk" value="milk">
-            <label class="form__checkbox-label" for="milk">Молоко</label>
-          </div>
-          <div class="form__row">
-            <input class="visually-hidden form__checkbox" id="vitamins" type="checkbox" name="vitamins" value="vitamins">
-            <label class="form__checkbox-label" for="vitamins">Витамины</label>
+          <div class="form__group5-box">
+            <div class="form__row">
+              <input class="visually-hidden form__checkbox-input" id="sugar-free" type="checkbox" name="sugar-free"
+                value="sugar-free" checked>
+              <label class="form__checkbox-label" for="sugar-free">Сахарозаменитель</label>
+            </div>
+            <div class="form__row">
+              <input class="visually-hidden form__checkbox-input" id="water" type="checkbox" name="water" value="water">
+              <label class="form__checkbox-label" for="water">Питьевая вода</label>
+            </div>
+            <div class="form__row">
+              <input class="visually-hidden form__checkbox-input" id="milk" type="checkbox" name="milk" value="milk">
+              <label class="form__checkbox-label" for="milk">Молоко</label>
+            </div>
+            <div class="form__row">
+              <input class="visually-hidden form__checkbox-input" id="vitamins" type="checkbox" name="vitamins" value="vitamins">
+              <label class="form__checkbox-label" for="vitamins">Витамины</label>
+            </div>
           </div>
         </fieldset>
 
-        <button type="submit" class="form__submit-button button">Отправить Заявку</button>
-        <small class="form__explanation">* — Обязательные поля</small>
+        <div class="form__submit-box">
+          <button type="submit" class="form__submit-button button">Отправить Заявку</button>
+          <small class="form__explanation">* — Обязательные поля</small>
+        </div>
       </form>
     </div>
 
