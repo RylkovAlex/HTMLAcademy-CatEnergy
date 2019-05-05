@@ -153,14 +153,14 @@
       <img class="page-footer__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
     </a>
     <ul class="page-footer__social-links social-links">
-      <li class="social-links__item social-links__item--vk">
-        <a href="#">VK</a>
+      <li class="social-links__item">
+        <a class="social-link social-link--vk" href="#">VK</a>
       </li>
-      <li class="social-links__item social-links__item--inst">
-        <a href="#">Instagram</a>
+      <li class="social-links__item">
+        <a class="social-link social-link--inst" href="#">Instagram</a>
       </li>
-      <li class="social-links__item social-links__item--fb">
-        <a href="#">Facebook</a>
+      <li class="social-links__item">
+        <a class="social-link social-link--fb" href="#">Facebook</a>
       </li>
     </ul>
     <div class="page-footer__copyright">
@@ -175,17 +175,38 @@
 </footer>
 
   <script src="js/menu.js"></script>
+  <script src="js/picturefill.js"></script>
 
   <script>
+    var mql = window.matchMedia("screen and (min-width: 768px)");
+    mql.addListener(setup_for_width);
+    // переменные для координат центра карты и маркера:
+        var center_lat, center_lng, pin_lat = 59.938738, pin_lng = 30.323059;
+    // картинка:
+    var image = 'img/map-pin.png';
+    // Функция для переопределения переменных в зависимости от ширины экрана:
+    function setup_for_width(mql) {
+      if (mql.matches) {
+        center_lat = 59.939048;
+        center_lng = 30.3189848;
+      } else {
+        // ширина экрана меньше 768 пикселей:
+        center_lat = pin_lat;
+        center_lng = pin_lng;
+        image = 'img/map-pin-png-50.png';
+      }
+    }
+
+    setup_for_width(mql);
+
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 17,
-          center: {lat: 59.939048, lng: 30.3189848}
+          center: {lat: center_lat, lng: center_lng}
         });
 
-        var image = 'img/map-pin.png';
         var beachMarker = new google.maps.Marker({
-          position: {lat: 59.938738, lng: 30.323059},
+          position: {lat: pin_lat, lng: pin_lng},
           map: map,
           icon: image
         });

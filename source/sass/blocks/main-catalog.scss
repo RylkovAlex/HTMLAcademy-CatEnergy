@@ -62,8 +62,7 @@
 }
 
 .main-catalog__item-properties {
-  display: flex;
-  flex-direction: column;
+  width: 140px;
   border-collapse: collapse;
   border: none;
 
@@ -204,6 +203,8 @@
   }
 
   .main-catalog__item-properties {
+    width: 250px;
+    margin: 0 auto;
     padding-left: 17px;
     padding-right: 17px;
     margin-bottom: 24px;
@@ -291,6 +292,10 @@
     width: 245px;
     padding-bottom: 39px;
     margin-bottom: 50px;
+  }
+
+  .main-catalog__item-properties {
+    width: 170px;
   }
 
   .main-catalog__button {

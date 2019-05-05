@@ -1,14 +1,18 @@
 .banner {
+  background:
+    url("../img/index-background-mobile@1x.jpg") no-repeat 50% 0,
+    linear-gradient(#65a93c 305px, #ffffff 305px);
+}
+
+.banner__wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   @include center;
   min-height: 504px; //сетка
-  padding-top: 26px;
+  padding-top: 28px;
   padding-bottom: 22px;
-
-  background:
-    url("../img/index-background-mobile@1x.jpg") no-repeat 50% 0,
-    linear-gradient($theme-color 305px, #ffffff 305px);
 }
 
 .banner__title {
@@ -34,30 +38,27 @@
   color: #ffffff;
 }
 
-.banner__wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 .banner__button {
   position: absolute;
   width: 280px;
   height: 40px;
-  bottom: 25px;
+  bottom: 22px;
   right: 20px;
 }
 
 // TABLET
 @media (min-width: $tablet-width) {
   .banner {
+    background: none;
+  }
+
+  .banner__wrapper {
     max-width: $tablet-width;
     width: 100%;
     min-height: 842px; //сетка
     padding-top: 21px;
     padding-right: 30px;
     padding-left: 30px;
-    background: none;
   }
 
   .banner__text-box {
@@ -100,9 +101,7 @@
 // DESKTOP
 @media (min-width: $desktop-width) {
   .banner {
-    max-width: none;
     width: auto;
-    min-height: 696px; //сетка
     margin-bottom: 78px;
 
     background:
@@ -114,13 +113,14 @@
   .banner__wrapper {
     max-width: $desktop-width;
     width: 100%;
+    min-height: 696px; //сетка
 
     margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 200px;
+    padding-top: 222px;
   }
 
   .banner__text-box {

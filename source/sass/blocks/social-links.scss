@@ -12,7 +12,11 @@
   font-size: 0;
 }
 
-.social-links__item--vk {
+.social-link {
+  display: block;
+}
+
+.social-link--vk {
   width: 22px;
   height: 12px;
 
@@ -20,7 +24,7 @@
   background-repeat: no-repeat;
 }
 
-.social-links__item--inst {
+.social-link--inst {
   width: 23px;
   height: 23px;
 
@@ -28,7 +32,7 @@
   background-repeat: no-repeat;
 }
 
-.social-links__item--fb {
+.social-link--fb {
   width: 10px;
   height: 19px;
 
