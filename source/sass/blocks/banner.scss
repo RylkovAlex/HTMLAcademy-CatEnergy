@@ -90,7 +90,7 @@
   }
 
   .banner__button {
-    position: unset;
+    position: static;
     width: 245px;
     height: 52px;
     padding-top: 16px;
@@ -124,7 +124,7 @@
   }
 
   .banner__text-box {
-    position: unset;
+    position: static;
     width: 50%;
     padding-left: 80px;
   }
@@ -139,6 +139,6 @@
   }
 
   .banner__button {
-    position: unset;
+    position: static;
   }
 }

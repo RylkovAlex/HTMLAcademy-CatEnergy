@@ -24,15 +24,16 @@
 }
 
 .extra-goods__table {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
-
-  border-collapse: collapse;
+  width: 100%;
 }
 
 .extra-goods__table tbody {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  margin-bottom: 40px;
+
+  border-collapse: collapse;
 }
 
 .extra-goods__item {
