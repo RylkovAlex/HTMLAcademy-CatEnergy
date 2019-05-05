@@ -1,11 +1,15 @@
 .main-catalog {
   @include center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .main-catalog__title {
   @include indents-0;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 13px;
+  padding-bottom: 29px;
 
   @include oswald-r;
   font-size: 36px;
@@ -26,11 +30,12 @@
 .main-catalog__item {
   display: flex;
   flex-wrap: wrap;
+  min-height: 209px; //сетка
 
   @include indents-0;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   border-bottom: 1px solid $border-grey;
 }
 
@@ -40,14 +45,15 @@
 
 .main-catalog__item-info {
   width: 50%;
-}
-
-.main-catalog__button {
-  width: 100%;
+  padding-top: 20px;
 }
 
 .main-catalog__item-name h3 {
+  width: 75px;
+
   @include indents-0;
+  margin-bottom: 12px;
+
   @include oswald-r;
   font-size: 16px;
   line-height: 20px;
@@ -55,24 +61,61 @@
   color: $title-color;
 }
 
-.main-catalog__item-image img {
-  display: block;
-}
-
 .main-catalog__item-properties {
+  width: 140px;
+  border-collapse: collapse;
+  border: none;
+
+  @include indents-0;
   font-size: 12px;
   line-height: 16px;
 }
 
+.main-catalog__item-properties tr {
+  display: flex;
+  margin-bottom: -1px;
+}
+
+.main-catalog__item-properties td {
+  display: block;
+  width: 45px;
+}
+
+.main-catalog__item-property {
+  margin-right: 50px;
+}
+
+.main-catalog__item-value {
+  text-align: right;
+}
+
 .main-catalog__item--show-more {
-  padding-top: 83px;
+  display: block;
+  padding-top: 25px;
   padding-bottom: 25px;
 
   border-bottom: 1px solid $border-grey;
 }
 
+.main-catalog__show-more-link {
+  display: block;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.main-catalog__show-more-image {
+  width: 31px;
+  height: 31px;
+  margin: 0 auto;
+  margin-bottom: 22px;
+  opacity: 0.2;
+  background-image: url("../img/icon-plus-mobile.svg");
+}
+
 .main-catalog__show-more-title {
   @include indents-0;
+  margin-bottom: 7px;
+
   @include oswald-r;
   font-size: 16px;
   line-height: 20px;
@@ -82,18 +125,36 @@
 
 .main-catalog__show-more-text {
   @include indents-0;
-
   font-size: 12px;
   line-height: 16px;
   text-align: center;
 }
 
-//TABLET:
+.main-catalog__button {
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+//---------------------------- TABLET: --------
 @media (min-width: $tablet-width) {
   .main-catalog {
     width: $tablet-width;
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .main-catalog__title {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+    margin-bottom: 45px;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    border: none;
   }
 
   .main-catalog__list {
@@ -103,50 +164,145 @@
   }
 
   .main-catalog__item {
-    align-items: center;
-    width: 324px;
-    min-height: 500px;
-    margin-bottom: 70px;
+    flex-direction: column;
+    flex-wrap: nowrap;
 
-    background-image: linear-gradient(#ffffff 70px, $bg-grey 70px);
+    width: 324px;
+    min-height: 521px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 50px;
+
+    background-image: linear-gradient(to top, $bg-grey 431px, #ffffff 431px);
   }
 
   .main-catalog__item-image {
     width: 100%;
-    // margin-top: -30px; когда норм картинки будут
+    padding-top: 45px;
+    margin-bottom: 16px;
+  }
+
+  .main-catalog__item-image--big {
+    padding-top: 10px;
   }
 
   .main-catalog__item-info {
     width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .main-catalog__item-name h3 {
+    width: 130px;
+    margin: 0 auto;
+    margin-bottom: 27px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .main-catalog__item-properties {
+    width: 250px;
+    margin: 0 auto;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .main-catalog__item-properties tr {
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+  }
+
+  .main-catalog__item-properties td {
+    width: 50%;
+  }
+
+  .main-catalog__button {
+    width: 249px;
+    margin: 0 auto;
   }
 
   .main-catalog__item--show-more {
+    position: relative;
+    padding-top: 145px;
+    padding-left: 35px;
+    padding-right: 35px;
+
     background-image: none;
-    border-top: 1px solid $border-grey; //кстати, как её сместить на 70px вниз? или делать псевдоэлементом?
+  }
+
+  .main-catalog__item--show-more::before {
+    position: absolute;
+    top: 90px;
+    left: 0;
+
+    content: "";
+    width: 100%;
+    height: 431px;
+
+    border: 1px solid $bg-grey;
+    background-color: transparent;
+  }
+
+  .main-catalog__show-more-image {
+    width: 61px;
+    height: 61px;
+
+    margin-bottom: 50px;
+  }
+
+  .main-catalog__show-more-title {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 27px;
+
+    font-size: 20px;
+  }
+
+  .main-catalog__show-more-text {
+    width: 170px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
-
+//----------------------DESKTOP: ------------------
 @media (min-width: $desktop-width) {
   .main-catalog {
-    width: $desktop-width;
+    max-width: $desktop-width;
+    width: 100%;
     padding-left: 40px;
     padding-right: 40px;
   }
 
-  .main-catalog__item {
-    width: 245px;
-    min-height: 555px;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-bottom: 40px;
-    margin-bottom: 18px;
-    margin-right: 80px;
-
-    background-image: linear-gradient(to top, $bg-grey 430px, #ffffff 430px);
+  .main-catalog__title {
+    padding-top: 8px;
   }
 
-  .main-catalog__item:nth-child(4n) { //нормально?
-    margin-right: 0;
+  .main-catalog__item {
+    width: 245px;
+    padding-bottom: 39px;
+    margin-bottom: 50px;
+  }
+
+  .main-catalog__item-properties {
+    width: 170px;
+  }
+
+  .main-catalog__button {
+    width: 169px;
+  }
+
+  .main-catalog__item--show-more::before {
+    top: 93px;
   }
 }

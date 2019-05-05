@@ -1,13 +1,30 @@
 .example {
-  @include center;
-  min-height: 705px; //сетка
+  width: 100%;
+  margin: 0 auto;
+
   background-color: $bg-grey;
 }
 
+.example__wrapper {
+  @include center;
+  padding: 0;
+  min-height: 705px; //сетка
+}
+
+.example__text-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 18px;
+  margin-bottom: 20px;
+}
+
 .example__title {
+  @include indents-0;
   @include oswald-r;
   font-size: 36px;
   line-height: 60px;
+
+  margin-bottom: 23px;
   text-align: left;
   text-transform: none;
   color: $title-color;
@@ -18,12 +35,7 @@
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-}
-
-.example__fact-title {
-  font-size: 12px;
-  line-height: 12px;
-  text-align: center;
+  margin: 0;
 }
 
 .example__cost {
@@ -34,26 +46,181 @@
   color: $title-color;
 }
 
+.example__description {
+  margin-bottom: 25px;
+}
+
+.example__facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.example__fact {
+  position: relative;
+  min-width: 124px;
+  min-height: 56px;
+  padding-top: 13px;
+  margin-right: 32px;
+  margin-bottom: 20px;
+
+  border: 1px solid green;
+}
+
+.example__text-content .example__fact:last-of-type {
+  margin-right: auto;
+}
+
+.example__fact-title {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
+  width: auto;
+
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+
+  background-color: $bg-grey;
+}
+
+// -------------------------------- TABLET:
 @media (min-width: $tablet-width) {
   .example {
-    min-height: 1085px; //сетка
-    width: $tablet-width;
+    background:
+      linear-gradient(to bottom, #ffffff 620px, transparent 620px),
+      linear-gradient(to left, #eaeaea 50%, #f2f2f2 50%);
+  }
+
+  .example__wrapper {
+    min-height: 1082px; //сетка
+    max-width: $tablet-width;
+    width: 100%;
+
+    padding-top: 0;
+  }
+
+  .example__text-content {
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 44px;
+    margin-bottom: 85px;
+  }
+
+  .example__title {
+    margin-bottom: 63px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__description {
+    padding-right: 10px;
+    margin-bottom: 53px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__facts {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .example__fact {
+    min-width: 162px;
+    min-height: 72px;
+    padding-top: 15px;
+    margin-right: 42px;
+    margin-bottom: 0;
+  }
+
+  .example__fact-value {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__fact-title {
+    bottom: -7px;
+
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap;
+
+    background-color: #ffffff;
+  }
+
+  .example__cost {
+    width: 180px;
+    margin: 0;
+    padding-top: 6px;
+
+    text-align: right;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
+// ---------------------------------DESKTOP:
 @media (min-width: $desktop-width) {
   .example {
-    display: flex;
-    width: $desktop-width;
-    min-height: 680px; //сетка
-    padding-left: 40px;
-    padding-right: 40px;
+    display: flex; //для IE - иначе баг с высотой вложенных контейнеров
+    flex-direction: column;
+    min-height: 633px;
+
+    background:
+      linear-gradient(to bottom, #ffffff 171px, transparent 171px),
+      linear-gradient(to left, #eaeaea 50%, #f2f2f2 50%);
   }
 
-  .example__text-content,
-  .example__slider {
-    width: 50%;
+  .example__wrapper {
+    display: flex;
+    max-width: $desktop-width;
+    width: 100%;
+    min-height: 633px;
+    padding-left: 40px;
+  }
+
+  .example__text-content {
+    width: 40%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 36px;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  .example__title {
+    margin-bottom: 147px;
+  }
+
+  .example__description {
+    width: 445px;
+    margin-bottom: 67px;
+  }
+
+  .example__facts {
+    flex-wrap: wrap;
+    width: 400px;
+  }
+
+  .example__fact {
+    margin-bottom: 50px;
+  }
+
+  .example__fact-title {
+    background-color: #f2f2f2;
+  }
+
+  .example__cost {
+    width: auto;
+    text-align: left;
+  }
+
+  .example__cost span {
+    padding-left: 60px;
   }
 }

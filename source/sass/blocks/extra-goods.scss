@@ -1,41 +1,67 @@
 .extra-goods {
+  overflow-x: hidden; //для зелёных полосок
+}
+
+.extra-goods__wrapper {
   @include center;
-  margin-bottom: 39px;
-}
-
-.extra-goods__table {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
-
-  border-collapse: collapse;
-}
-
-.extra-goods__table tbody {
-  width: 100%;
-}
-
-.extra-goods__item {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  border-bottom: 1px solid $border-grey;
+  margin-bottom: 35px;
 }
 
 .extra-goods__heading {
   width: 100%;
 
   @include indents-0;
+  padding-top: 27px;
+  padding-bottom: 33px;
+
   @include oswald-r;
   font-size: 24px;
   line-height: 24px;
   text-transform: none;
   color: $title-color;
+
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.extra-goods__table {
+  width: inherit;
+}
+
+.extra-goods__table tbody {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+
+  @include indents-0;
+  margin-bottom: 40px;
+
+  border-collapse: collapse;
+  border: none;
+}
+
+.extra-goods__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 280px; //для IE
+  padding-top: 13px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.extra-goods__item td {
+  display: block;
+}
+
+.extra-goods__title {
+  width: 100%;
 }
 
 .extra-goods__name {
   @include oswald-r;
+  @include indents-0;
+  margin-bottom: 12px;
   font-size: 16px;
   line-height: 16px;
   color: $light-black2;
@@ -49,41 +75,99 @@
   line-height: 14px;
 }
 
+.extra-goods__price {
+  text-align: right;
+  margin-bottom: 12px;
+}
+
+
 .extra-goods__button {
   width: 100%;
+}
+
+.extra-goods__button .button {
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .extra-goods__button a {
   width: 100%;
 }
 
-//TABLET:
+//---------------------------------TABLET:
 @media (min-width: $tablet-width) {
-  .extra-goods {
-    width: $tablet-width;
+  .extra-goods__wrapper {
+    max-width: $tablet-width;
+    width: 100%;
+
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
+  }
+
+  .extra-goods__heading-box {
+    display: flex;
   }
 
   .extra-goods__heading {
+    position: relative;
+    width: auto;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 37px;
+    padding-right: 37px;
+    margin-bottom: 63px;
+
     font-size: 36px;
     line-height: 36px;
+
+    border: none;
   }
 
   .extra-goods__table {
+    width: 100%;
     margin-bottom: 70px;
+  }
+
+  .extra-goods__heading::before,
+  .extra-goods__heading::after {
+    position: absolute;
+    top: 55%;
+    right: 100%;
+    display: block;
+
+    content: "";
+    width: 100vw;
+    height: 3px;
+    background-color: $theme-color;
+  }
+
+  .extra-goods__heading::after {
+    left: 100%;
   }
 
   .extra-goods__item {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    width: 100%;
+    padding-left: 37px;
+    padding-right: 35px;
+    padding-top: 25px;
+    padding-bottom: 26px;
+
+    border: 1px solid $border-grey;
+    margin-top: -1px; //чтоб рамки границы не сдваивались
   }
 
   .extra-goods__title {
     width: 50%;
     margin-right: auto;
+    margin-bottom: 11px;
   }
 
   .extra-goods__name {
@@ -93,23 +177,90 @@
 
   .extra-goods__quantity,
   .extra-goods__price {
-    width: 20%;
+    padding-top: 4px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extra-goods__quantity {
+    width: 150px;
+    text-align: right;
+  }
+
+  .extra-goods__price {
+    width: 50px;
+    margin-left: 45px;
   }
 }
 
+//---------------------------------DESKTOP:
 @media (min-width: $desktop-width) {
-  .extra-goods {
+  .extra-goods__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: $desktop-width;
+    max-width: $desktop-width;
+    width: 100%;
+
     padding-left: 40px;
     padding-right: 40px;
-    margin-bottom: 70px;
+    margin-bottom: 15px;
+  }
+
+  .extra-goods__heading {
+    padding-left: 0;
+    padding-top: 25px;
+  }
+
+  .extra-goods__heading::before {
+    top: 60%;
+    right: calc(100% + 40px);
+  }
+
+  .extra-goods__heading::after {
+    top: 60%;
   }
 
   .extra-goods__table {
     width: 895px;
     margin-bottom: 70px;
+  }
+
+  .extra-goods__item {
+    flex-wrap: nowrap;
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 14px;
+    padding-bottom: 2px;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  .extra-goods__title {
+    padding-top: 11px;
+    width: 250px;
+    margin-right: 73px;
+  }
+
+  .extra-goods__quantity,
+  .extra-goods__price {
+    padding-top: 15px;
+    text-align: left;
+  }
+
+  .extra-goods__quantity {
+    margin-right: 95px;
+  }
+
+  .extra-goods__price {
+    margin-left: 0;
+  }
+
+  .extra-goods__button {
+    width: 245px;
+    margin-left: auto;
   }
 }

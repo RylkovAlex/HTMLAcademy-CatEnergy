@@ -1,39 +1,52 @@
 .catalog {
+  position: relative;
   min-height: 266px; //сетка
 
-  @include indents-0;
   padding-left: 21px;
   padding-right: 21px;
   padding-top: 22px;
   padding-bottom: 22px;
-
-  margin-bottom: 20px;
 
   background-color: $bg-grey;
 }
 
 .catalog__image {
   position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/circle.svg");
 
-  width: 67px;
-  height: 51px;
-
-  background-position: 50% 0;
-
-  &--slim {
-    background-image: url("../img/icon-cat-slim.svg");
+  &::before {
+    position: absolute;
+    content: "";
+    width: 67px;
+    height: 51px;
     background-repeat: no-repeat;
   }
 
-  &--pro {
+  &--slim::before {
+    left: 8px;
+    top: -4px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--pro::before {
+    left: -8px;
+    top: 9px;
+
     background-image: url("../img/icon-cat-pro.svg");
-    background-repeat: no-repeat;
   }
 }
 
 .catalog__header {
   @include indents-0;
   padding-left: 72px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
 
   @include oswald-r;
   font-size: 24px;
@@ -42,7 +55,16 @@
   text-align: left;
 }
 
+.catalog__description {
+  padding-bottom: 20px;
+  margin-bottom: 19px;
+  border-bottom: 2px solid #d9d9d9;
+}
+
 .catalog__button {
+  position: relative;
+  padding-right: 50px;
+
   @include oswald-r;
   font-size: 16px;
   line-height: 16px;
@@ -50,15 +72,127 @@
   text-align: left;
 }
 
+.catalog__button::after {
+  position: absolute;
+  right: 16px;
+  top: 20%;
+
+  width: 25px;
+  height: 12px;
+
+  content: "";
+  background-image: url("../../img/icon-right-arrow-long.svg");
+}
+
+//TABLET:
 @media (min-width: $tablet-width) {
   .catalog {
     min-height: 372px; //сетка
     margin-bottom: 30px;
+    padding-left: 52px;
+    padding-right: 28px;
+    padding-top: 50px;
+  }
+
+  .catalog__header {
+    width: 340px;
+    padding-left: 0;
+    margin-bottom: 20px;
+
+    font-size: 36px;
+    line-height: 37px;
+  }
+
+  .catalog__description {
+    width: 372px;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
+
+  .catalog__description--pro {
+    width: 340px;
+  }
+
+  .catalog__image {
+    top: 70px;
+    left: 445px;
+    width: 200px;
+    height: 200px;
+
+    &--slim::before {
+      left: 30px;
+      top: -13px;
+
+      width: 141px;
+      height: 194px;
+    }
+
+    &--pro::before {
+      left: -33px;
+      top: 44px;
+
+      width: 268px;
+      height: 113px;
+    }
+  }
+
+  .catalog__button {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .catalog__button::after {
+    top: 10px;
+    right: 0;
   }
 }
 
+//DESKTOP:
 @media (min-width: $desktop-width) {
   .catalog {
-    width: 570px;
+    width: 570px; //сетка
+    padding-left: 52px;
+    padding-top: 73px;
+    margin-bottom: 0;
+  }
+
+  .catalog__header {
+    width: 380px;
+    padding-left: 163px;
+    margin-bottom: 69px;
+  }
+
+  .catalog__description {
+    width: 462px;
+    margin-bottom: 11px;
+  }
+
+  .catalog__description--pro {
+    width: 446px;
+  }
+
+  .catalog__image {
+    top: 49px;
+    left: 52px;
+    width: 100px;
+    height: 100px;
+
+    &--slim::before {
+      left: 14px;
+      top: -5px;
+
+      width: 71px;
+      height: 97px;
+    }
+
+    &--pro::before {
+      left: -18px;
+      top: 22px;
+
+      width: 134px;
+      height: 57px;
+    }
   }
 }

@@ -29,13 +29,16 @@ html {
 body {
   @include indents-0;
   min-width: $mobile-width;
+
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-style: normal;
   text-align: left;
   color: $light-black4;
+
   background-color: #ffffff;
+  counter-reset: section;
 }
 
 .visually-hidden {
@@ -52,4 +55,10 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

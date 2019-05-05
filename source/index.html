@@ -12,8 +12,11 @@
 <body>
   <header class="page-header page-header--index">
     <a class="page-header__logo-link">
-      <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39"
-        alt="логотип Cat Energy">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39" alt="логотип Cat Energy">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -34,10 +37,16 @@
   <main class="page-main">
     <section class="banner">
       <div class="banner__wrapper">
-        <h1 class="banner__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
-        <p class="banner__lead">Занялся собой? Займись котом!</p>
-        <img class="banner__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Изображение товара - Функциональное питание для котов">
-        <a class="banner__button button" href="#">Подобрать программу</a>
+        <div class="banner__text-box">
+          <h1 class="banner__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
+          <p class="banner__lead">Занялся собой? Займись котом!</p>
+          <a class="banner__button button" href="form.html">Подобрать программу</a>
+        </div>
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img class="banner__image" src="img/index-can-mobile@1x.png" alt="Изображение товара - Функциональное питание для котов">
+        </picture>
       </div>
     </section>
 
@@ -47,13 +56,13 @@
           <div class="catalog__image catalog__image--slim"></div>
           <h2 class="catalog__header">Похудение</h2>
           <p class="catalog__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-            Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            Пора&nbsp;на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="catalog__button" href="catalog.html">Каталог Slim</a>
         </li>
         <li class="catalogues__item catalog">
           <div class="catalog__image catalog__image--pro"></div>
           <h2 class="catalog__header">Набор Массы</h2>
-          <p class="catalog__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
+          <p class="catalog__description catalog__description--pro">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro
             поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="catalog__button" href="catalog.html">Каталог Pro</a>
         </li>
@@ -74,37 +83,52 @@
           <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
         </li>
         <li class="advantages__item advantages__item--time">
-          <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
         </li>
       </ul>
     </section>
 
     <section class="example">
-      <div class="example__text-content">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-          часов в день.</p>
-        <div class="example__fact">
-          <p class="example__fact-value">5 кг</p>
-          <small class="example__fact-title">Снижение веса</small>
+      <div class="example__wrapper">
+        <div class="example__text-content">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+            часов в день.</p>
+          <div class="example__facts">
+            <div class="example__fact">
+              <p class="example__fact-value">5 кг</p>
+              <small class="example__fact-title">снижение веса</small>
+            </div>
+            <div class="example__fact">
+              <p class="example__fact-value">60 дней</p>
+              <small class="example__fact-title">затрачено времени</small>
+            </div>
+            <p class="example__cost">Затраты на питание: <span>15&nbsp;000&nbsp;руб.</span></p>
+          </div>
         </div>
-        <div class="example__fact">
-          <p class="example__fact-value">60 дней</p>
-          <small class="example__fact-title">Затрачено времени</small>
-        </div>
-        <p class="example__cost">Затраты на питание: 15 000 руб.</p>
-      </div>
-      <div class="example__slider switch-slider">
-        <img class="switch-slider__image switch-slider__image--slide-1" src="img/before-mobile@1x.png" width="311"
-          height="232" alt="Фото кота ДО">
-        <img class="switch-slider__image switch-slider__image--slide-2" src="img/after-mobile@1x.png" width="251"
-          height="240" alt="Фото кота ПОСЛЕ">
-        <!-- Тут не знаю, как лучше разметить переключатель слайдов, чтобы потом проще было стилизовать?-->
-        <div class="switch-slider__changer">
-          <p class="switch-slider__slide-title">Было</p>
-          <button class="switch-slider__change-button" type="button"></button>
-          <p class="switch-slider__slide-title">Стало</p>
+
+        <div class="example__slider switch-slider">
+          <div class="switch-slider__image-box">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+              <img class="switch-slider__image switch-slider__image--slide-1" src="img/before-mobile@1x.png" alt="Фото кота ДО">
+            </picture>
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+              <img class="switch-slider__image switch-slider__image--slide-2" src="img/after-mobile@1x.png" alt="Фото кота ПОСЛЕ">
+            </picture>
+          </div>
+
+          <div class="switch-slider__changer">
+            <p class="switch-slider__slide-title switch-slider__slide-title--before">Было</p>
+            <div class="switch-slider__line-box">
+              <div class="swith-slider__line"></div>
+              <button class="switch-slider__change-button" type="button"></button>
+            </div>
+            <p class="switch-slider__slide-title switch-slider__slide-title--after">Стало</p>
+          </div>
         </div>
       </div>
     </section>
@@ -112,44 +136,88 @@
     <section class="contacts">
       <div class="contacts__text-box-wrapper">
         <div class="contacts__text-box">
-          <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <h2 class="contacts__title">приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+          <div class="contacts__address">
+            <p class="contacts__address1">ул. Большая<br>Конюшенная, д. 19/8</p>
+            <p class="contacts__address2">Санкт-Петербург</p>
+          </div>
         </div>
       </div>
-      <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1555494369114!5m2!1sru!2sru" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <!-- <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта"> -->
+      <div class="contacts__map" id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1555494369114!5m2!1sru!2sru" width="100%" height="365" frameborder="0" style="border:0" allowfullscreen></iframe>
         <div class="contacts__map-pin"></div>
-        <!-- <img class="contacts__map-pin" src="img/map-pin.png" width="55" height="53" alt="Местоположение на карте"> -->
       </div>
     </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__logo">
+<footer class="page-footer">
+  <div class="page-footer-wrapper">
+    <a class="page-footer__logo" href="index.html">
       <img class="page-footer__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
-    </div>
+    </a>
     <ul class="page-footer__social-links social-links">
-      <li class="social-links__item social-links__item--vk">
-        <a href="#">VK</a>
+      <li class="social-links__item">
+        <a class="social-link social-link--vk" href="#">VK</a>
       </li>
-      <li class="social-links__item social-links__item--inst">
-        <a href="#">Instagram</a>
+      <li class="social-links__item">
+        <a class="social-link social-link--inst" href="#">Instagram</a>
       </li>
-      <li class="social-links__item social-links__item--fb">
-        <a href="#">Facebook</a>
+      <li class="social-links__item">
+        <a class="social-link social-link--fb" href="#">Facebook</a>
       </li>
     </ul>
     <div class="page-footer__copyright">
       <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       <a class="page-footer__copyright-image" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="page-footer__copyright-icon" src="img/htmlacademy.svg" width="27" height="34"
-          alt="логотип академии">
+        <svg class="page-footer__copyright-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34">
+          <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
+      </svg>
       </a>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <script src="js/menu.js"></script>
+  <script src="js/picturefill.min.js"></script>
+
+  <script>
+    var mql = window.matchMedia("screen and (min-width: 768px)");
+    mql.addListener(setup_for_width);
+    // переменные для координат центра карты и маркера:
+        var center_lat, center_lng, pin_lat = 59.938738, pin_lng = 30.323059;
+    // картинка:
+    var image = 'img/map-pin.png';
+    // Функция для переопределения переменных в зависимости от ширины экрана:
+    function setup_for_width(mql) {
+      if (mql.matches) {
+        center_lat = 59.939048;
+        center_lng = 30.3189848;
+      } else {
+        // ширина экрана меньше 768 пикселей:
+        center_lat = pin_lat;
+        center_lng = pin_lng;
+        image = 'img/map-pin-png-50.png';
+      }
+    }
+
+    setup_for_width(mql);
+
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: {lat: center_lat, lng: center_lng}
+        });
+
+        var beachMarker = new google.maps.Marker({
+          position: {lat: pin_lat, lng: pin_lng},
+          map: map,
+          icon: image
+        });
+      }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO_gNhKCxAO2joblO1qfuEcD_zxeC5hbE&callback=initMap">
+  </script>
 
 </body>
 
