@@ -167,6 +167,8 @@
 // ---------------------------------DESKTOP:
 @media (min-width: $desktop-width) {
   .example {
+    display: flex; //для IE - иначе баг с высотой вложенных контейнеров
+    flex-direction: column;
     min-height: 633px;
 
     background:
