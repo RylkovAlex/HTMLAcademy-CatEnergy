@@ -24,27 +24,34 @@
 }
 
 .extra-goods__table {
-  width: 100%;
+  width: inherit;
 }
 
 .extra-goods__table tbody {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: inherit;
+
+  @include indents-0;
   margin-bottom: 40px;
 
   border-collapse: collapse;
+  border: none;
 }
 
 .extra-goods__item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  width: 280px; //для IE
   padding-top: 13px;
   padding-bottom: 15px;
 
   border-bottom: 1px solid #cdcdcd;
+}
+
+.extra-goods__item td {
+  display: block;
 }
 
 .extra-goods__title {
@@ -121,6 +128,7 @@
   }
 
   .extra-goods__table {
+    width: 100%;
     margin-bottom: 70px;
   }
 

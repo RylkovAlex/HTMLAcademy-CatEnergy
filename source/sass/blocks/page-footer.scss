@@ -13,8 +13,13 @@
 }
 
 .page-footer__logo {
+  min-height: 91px; //для IE
+
   padding-top: 35px;
   padding-bottom: 32px;
+}
+
+.page-footer__img {
   margin: 0 auto;
 }
 
@@ -60,9 +65,14 @@
 
   .page-footer__logo {
     width: 30%;
+    min-height: 45px; //для IE
 
     @include indents-0;
     padding-top: 10px;
+  }
+
+  .page-footer__img {
+    margin: 0;
   }
 
   .page-footer__social-links {
