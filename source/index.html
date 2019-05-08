@@ -109,18 +109,21 @@
 
         <div class="example__slider switch-slider">
           <div class="switch-slider__image-box">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-              <img class="switch-slider__image switch-slider__image--slide-1" src="img/before-mobile@1x.png" alt="Фото кота ДО">
-            </picture>
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-              <img class="switch-slider__image switch-slider__image--slide-2" src="img/after-mobile@1x.png" alt="Фото кота ПОСЛЕ">
-            </picture>
+            <div class="switch-slider__picture switch-slider__picture--slide-1">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img class="switch-slider__image" src="img/before-mobile@1x.png" alt="Фото кота ДО">
+              </picture>
+            </div>
+            <div class="switch-slider__picture switch-slider__picture--slide-2">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                <img class="switch-slider__image" src="img/after-mobile@1x.png" alt="Фото кота ПОСЛЕ">
+              </picture>
+            </div>
           </div>
-
           <div class="switch-slider__changer">
             <p class="switch-slider__slide-title switch-slider__slide-title--before">Было</p>
             <div class="switch-slider__line-box">
@@ -130,7 +133,6 @@
             <p class="switch-slider__slide-title switch-slider__slide-title--after">Стало</p>
           </div>
         </div>
-      </div>
     </section>
 
     <section class="contacts">
