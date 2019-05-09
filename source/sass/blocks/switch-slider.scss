@@ -191,15 +191,13 @@
   }
 
   .switch-slider__image-box {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+    top: -20px;
   }
 
-  .switch-slider__image--slide-1 {
-    clip-path: polygon(0 0, 365px 0, 365px 100%, 0 100%);
-  }
-
-  .switch-slider__image--slide-2 {
-    clip-path: polygon(365px 0, 100% 0, 100% 100%, 365px 100%);
+  .switch-slider__picture--slide-1 {
+    width: 53%;
+    background: linear-gradient(to bottom, #ffffff 37%, #f2f2f2 37%);
   }
 
   .switch-slider__changer {
