@@ -84,6 +84,16 @@
   background-image: url("../../img/icon-right-arrow-long.svg");
 }
 
+.catalog__button:hover::after {
+  right: 7px;
+  width: 34px;
+  background-image: url("../../img/icon-right-arrow-verylong.svg");
+}
+
+.catalog__button:active {
+  opacity: 0.3;
+}
+
 //TABLET:
 @media (min-width: $tablet-width) {
   .catalog {
@@ -146,6 +156,10 @@
   .catalog__button::after {
     top: 10px;
     right: 0;
+  }
+
+  .catalog__button:hover::after {
+    right: -10px;
   }
 }
 

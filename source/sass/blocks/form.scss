@@ -116,14 +116,27 @@
   height: 45px;
 
   padding-left: 12px;
+  opacity: 0.5;
   border: 1px solid #cdcdcd;
 }
 
-.form__text-input:active {
+.form__text-input:hover {
+  outline: none;
+  opacity: 1;
+}
+
+.form__text-input:focus {
+  outline: none;
   border: solid 2px #444444;
 }
 
+.form__text-input:focus + .icon-mail,
+.form__text-input:focus + .icon-phone {
+  fill: $theme-color;
+}
+
 .form__text-label {
+  flex-shrink: 0;
   margin-right: 15px;
 }
 
@@ -205,6 +218,23 @@
 .form__text-input--phone {
   padding-left: 16px;
   padding-right: 35px;
+}
+
+.form__row--email,
+.form__row--phone {
+  position: relative;
+}
+
+.icon-mail {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.icon-phone {
+  position: absolute;
+  top: 13px;
+  right: 12px;
 }
 
 .form__group4 {
@@ -427,6 +457,16 @@
 
   .form__text-label--phone {
     margin-right: 23px;
+  }
+
+  .icon-mail {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .icon-phone {
+    top: 17px;
+    right: 17px;
   }
 
   .form__group4 {
