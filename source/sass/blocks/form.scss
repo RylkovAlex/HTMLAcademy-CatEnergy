@@ -116,19 +116,22 @@
   height: 45px;
 
   padding-left: 12px;
-  opacity: 0.5;
-  border: 1px solid #cdcdcd;
+  border: 1px solid rgba(205, 205, 205, 0.5);
 }
 
 .form__text-input:hover {
   outline: none;
-  opacity: 1;
+  border-color: #cdcdcd;
 }
 
 .form__text-input:focus {
   outline: none;
   border: solid 2px #444444;
 }
+
+// .form__text-input:invalid {
+//   border-color: #ff8282;
+// }
 
 .form__text-input:focus + .icon-mail,
 .form__text-input:focus + .icon-phone {
@@ -145,7 +148,7 @@
   padding-top: 27px;
   margin-bottom: 30px;
 
-  border: 1px solid green;
+  border: 1px solid rgba(205, 205, 205, 0.5);
 }
 
 .form__radio-label {
@@ -273,7 +276,7 @@
   padding-left: 14px;
   padding-right: 12px;
 
-  border: 1px solid green;
+  border: 1px solid rgba(205, 205, 205, 0.5);
 }
 
 .form__group5 {
@@ -463,7 +466,7 @@
   .form__text-input--phone {
     width: unset;
   }
-  
+
   .form__text-label--email {
     margin-right: 28px;
   }
@@ -476,7 +479,7 @@
     top: 20px;
     right: 20px;
   }
-  
+
   .icon-phone {
     top: 17px;
     right: 17px;
