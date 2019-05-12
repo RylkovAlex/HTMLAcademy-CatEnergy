@@ -220,6 +220,14 @@
   padding-right: 35px;
 }
 
+.form__text-input--email {
+  width: 220px;
+}
+
+.form__text-input--phone {
+  width: 204px;
+}
+
 .form__row--email,
 .form__row--phone {
   position: relative;
@@ -451,6 +459,11 @@
     margin-bottom: 20px;
   }
 
+  .form__text-input--email,
+  .form__text-input--phone {
+    width: unset;
+  }
+  
   .form__text-label--email {
     margin-right: 28px;
   }

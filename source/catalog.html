@@ -72,6 +72,7 @@
                 media="(min-width: 768px)"
                 srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
               <img
+                src="img/chicken-small-mobile@1x.jpg"
                 srcset="img/chicken-small-mobile@1x.jpg 1x, img/chicken-small-mobile@2x.jpg 2x"
                 alt="Изображение товара">
             </picture>
@@ -108,6 +109,7 @@
                 media="(min-width: 768px)"
                 srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
               <img
+                src="img/chicken-big-mobile@1x.jpg"
                 srcset="img/chicken-big-mobile@1x.jpg 1x, img/chicken-big-mobile@2x.jpg 2x"
                 alt="Изображение товара">
             </picture>
@@ -144,6 +146,7 @@
                 media="(min-width: 768px)"
                 srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
               <img
+                src="img/fish-small-mobile@1x.jpg"
                 srcset="img/fish-small-mobile@1x.jpg 1x, img/fish-small-mobile@2x.jpg 2x"
                 alt="Изображение товара">
             </picture>
@@ -180,6 +183,7 @@
                 media="(min-width: 768px)"
                 srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
               <img
+                src="img/fish-big-mobile@1x.jpg"
                 srcset="img/fish-big-mobile@1x.jpg 1x, img/fish-big-mobile@2x.jpg 2x"
                 alt="Изображение товара">
             </picture>
@@ -216,6 +220,7 @@
                 media="(min-width: 768px)"
                 srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
               <img
+                src="img/buckwheat-small-mobile@1x.jpg"
                 srcset="img/buckwheat-small-mobile@1x.jpg 1x, img/buckwheat-small-mobile@2x.jpg 2x"
                 alt="Изображение товара">
             </picture>
@@ -252,6 +257,7 @@
                 media="(min-width: 768px)"
                 srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
               <img
+                src="img/buckwheat-big-mobile@1x.jpg"
                 srcset="img/buckwheat-big-mobile@1x.jpg 1x, img/buckwheat-big-mobile@2x.jpg 2x"
                 alt="Изображение товара">
             </picture>
@@ -288,6 +294,7 @@
                 media="(min-width: 768px)"
                 srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
               <img
+                src="img/rice-small-mobile@1x.jpg"
                 srcset="img/rice-small-mobile@1x.jpg 1x, img/rice-small-mobile@2x.jpg 2x"
                 alt="Изображение товара">
             </picture>
@@ -440,22 +447,7 @@
 
   <script src="js/menu.js"></script>
   <script src="js/picturefill.min.js"></script>
-
-  <script>
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: {lat: 59.939048, lng: 30.3189848}
-        });
-
-        var image = 'img/map-pin.png';
-        var beachMarker = new google.maps.Marker({
-          position: {lat: 59.938738, lng: 30.323059},
-          map: map,
-          icon: image
-        });
-      }
-  </script>
+  <script src="js/initMap.js"></script>
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO_gNhKCxAO2joblO1qfuEcD_zxeC5hbE&callback=initMap">
   </script>

@@ -71,7 +71,7 @@
             media="(min-width: 768px)"
             srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
           <img
-            class="banner__image"
+            class="banner__image" src="img/index-can-mobile@1x.png"
             srcset="img/index-can-mobile@1x.png 1x, img/index-can-mobile@2x.png 2x"
             alt="Изображение товара - Функциональное питание для котов">
         </picture>
@@ -118,6 +118,7 @@
 
     <section class="example">
       <div class="example__wrapper">
+
         <div class="example__text-content">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
@@ -146,11 +147,12 @@
                   media="(min-width: 768px)"
                   srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                 <img
-                  class="switch-slider__image"
+                  class="switch-slider__image" src ="img/before-mobile@1x.png"
                   srcset="img/before-mobile@1x.png 1x, img/before-mobile@2x.png 2x"
                   alt="Фото кота ДО">
               </picture>
             </div>
+
             <div class="switch-slider__picture switch-slider__picture--slide-2">
               <picture>
                 <source
@@ -160,8 +162,8 @@
                   media="(min-width: 768px)"
                   srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
                 <img
-                  class="switch-slider__image"
-                  src="img/after-mobile@1x.png 1x, img/after-mobile@2x.png 2x"
+                  class="switch-slider__image" src="img/after-mobile@1x.png"
+                  srcset="img/after-mobile@1x.png 1x, img/after-mobile@2x.png 2x"
                   alt="Фото кота ПОСЛЕ">
               </picture>
             </div>
@@ -175,6 +177,7 @@
             <p class="switch-slider__slide-title switch-slider__slide-title--after">Стало</p>
           </div>
         </div>
+      </div>
     </section>
 
     <section class="contacts">
@@ -187,10 +190,7 @@
           </div>
         </div>
       </div>
-      <div class="contacts__map" id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1555494369114!5m2!1sru!2sru" width="100%" height="365" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <div class="contacts__map-pin"></div>
-      </div>
+      <div class="contacts__map" id="map"></div>
     </section>
   </main>
 
@@ -233,42 +233,7 @@
 
   <script src="js/menu.js"></script>
   <script src="js/picturefill.min.js"></script>
-
-  <script>
-    var mql = window.matchMedia("screen and (min-width: 768px)");
-    mql.addListener(setup_for_width);
-    // переменные для координат центра карты и маркера:
-        var center_lat, center_lng, pin_lat = 59.938738, pin_lng = 30.323059;
-    // картинка:
-    var image = 'img/map-pin.png';
-    // Функция для переопределения переменных в зависимости от ширины экрана:
-    function setup_for_width(mql) {
-      if (mql.matches) {
-        center_lat = 59.939048;
-        center_lng = 30.3189848;
-      } else {
-        // ширина экрана меньше 768 пикселей:
-        center_lat = pin_lat;
-        center_lng = pin_lng;
-        image = 'img/map-pin-png-50.png';
-      }
-    }
-
-    setup_for_width(mql);
-
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: {lat: center_lat, lng: center_lng}
-        });
-
-        var beachMarker = new google.maps.Marker({
-          position: {lat: pin_lat, lng: pin_lng},
-          map: map,
-          icon: image
-        });
-      }
-  </script>
+  <script src="js/initMap.js"></script>
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO_gNhKCxAO2joblO1qfuEcD_zxeC5hbE&callback=initMap">
   </script>
