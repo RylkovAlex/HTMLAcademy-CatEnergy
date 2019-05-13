@@ -61,10 +61,10 @@
   .banner__wrapper {
     max-width: $tablet-width;
     width: 100%;
-    min-height: 842px; //сетка
     padding-top: 21px;
     padding-right: 30px;
     padding-left: 30px;
+    padding-bottom: 0px;
   }
 
   .banner__text-box {
