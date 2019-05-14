@@ -64,12 +64,19 @@
           <a class="banner__button button" href="form.html">Подобрать программу</a>
         </div>
         <picture>
+          <source type="image/webp"
+            media="(min-width: 1300px)"
+            srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
           <source
             media="(min-width: 1300px)"
             srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+          <source type="image/webp"
+          media="(min-width: 768px)"
+          srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
           <source
             media="(min-width: 768px)"
             srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+          <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
           <img
             class="banner__image" src="img/index-can-mobile@1x.png"
             srcset="img/index-can-mobile@1x.png 1x, img/index-can-mobile@2x.png 2x"
@@ -140,12 +147,19 @@
           <div class="switch-slider__image-box">
             <div class="switch-slider__picture switch-slider__picture--slide-1">
               <picture>
+                <source type="image/webp"
+                  media="(min-width: 1300px)"
+                  srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
                 <source
                   media="(min-width: 1300px)"
                   srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
                 <source
                   media="(min-width: 768px)"
                   srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
                 <img
                   class="switch-slider__image" src ="img/before-mobile@1x.png"
                   srcset="img/before-mobile@1x.png 1x, img/before-mobile@2x.png 2x"
@@ -155,12 +169,19 @@
 
             <div class="switch-slider__picture switch-slider__picture--slide-2">
               <picture>
+                <source type="image/webp"
+                  media="(min-width: 1300px)"
+                  srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                 <source
                   media="(min-width: 1300px)"
                   srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
                 <source
                   media="(min-width: 768px)"
                   srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
                 <img
                   class="switch-slider__image" src="img/after-mobile@1x.png"
                   srcset="img/after-mobile@1x.png 1x, img/after-mobile@2x.png 2x"
@@ -202,21 +223,24 @@
     <ul class="page-footer__social-links social-links">
       <li class="social-links__item">
         <a class="social-link social-link--vk" href="#">VK
-          <svg class="icon-vk" fill="#666666" width ="22" height="12">
+          <svg class="icon-vk" role="img" fill="#666666" width ="22" height="12">
+            <title>иконка Вконтакте</title>
             <use xlink:href="#icon-vk"></use>
           </svg>
         </a>
       </li>
       <li class="social-links__item">
         <a class="social-link social-link--inst" href="#">Instagram
-          <svg class="icon-insta" fill="#666666" width="17" height="17">
+          <svg class="icon-insta" role="img" fill="#666666" width="17" height="17">
+            <title>иконка Instagram</title>
             <use xlink:href="#icon-insta"></use>
           </svg>
         </a>
       </li>
       <li class="social-links__item">
         <a class="social-link social-link--fb" href="#">Facebook
-          <svg class="icon-fb" fill="#666666" width="10" height="19">
+          <svg class="icon-fb" role="img" fill="#666666" width="10" height="19">
+            <title>иконка Facebook</title>
             <use xlink:href="#icon-fb"></use>
           </svg>
         </a>
@@ -224,7 +248,8 @@
     </ul>
     <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
       <span>HTML Academy</span>
-      <svg class="page-footer__copyright-icon" width="27" height="34" viewBox="0 0 27 34" fill="#666666">
+      <svg class="page-footer__copyright-icon" role="img" width="27" height="34" viewBox="0 0 27 34" fill="#666666">
+        <title>иконка HTML Academy</title>
         <use xlink:href="#htmlacademy"></use>
       </svg>
     </a>
