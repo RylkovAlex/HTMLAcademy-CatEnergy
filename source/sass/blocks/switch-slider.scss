@@ -15,6 +15,7 @@
 }
 
 .switch-slider__image-box {
+  position: relative;
   margin-bottom: 16px;
 }
 
@@ -22,20 +23,16 @@
   margin: 0 auto;
 }
 
-.switch-slider__image--slide-2 {
+.switch-slider__picture--slide-2 {
   display: none;
 }
 
 .switch-slider__changer {
-  margin: 0 auto;
-  // position: absolute;
-  // left: 50%;
-  // transform: translateX(-50%);
-  // bottom: 11px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin: 0 auto;
 }
 
 .switch-slider__line-box {
@@ -78,27 +75,44 @@
     min-height: 600px;
   }
 
-  .switch-slider__image {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  .switch-slider__image-box {
+    width: 690px;
+    height: 517px;
+
+    overflow: hidden;
+    margin: 0 auto;
   }
 
-  .switch-slider__image-box {
-    height: 517px;
+  .switch-slider__image {
+    max-width: unset;
+    height: 100%;
+
     margin-bottom: 0;
   }
 
-  .switch-slider__image--slide-1 {
-    z-index: 1;
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  .switch-slider__picture {
+    position: relative;
+    display: block;
+    overflow: hidden;
   }
 
-  .switch-slider__image--slide-2 {
-    display: block;
-    z-index: 2;
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  .switch-slider__picture--slide-1 {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    z-index: 1;
+    background: linear-gradient(to bottom, #ffffff 33%, #f2f2f2 33%);
+    // clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+
+  .switch-slider__picture--slide-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    // clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
   }
 
   .switch-slider__changer {
@@ -131,10 +145,10 @@
 
   .swith-slider__line {
     width: 428px;
-    height: 2px;
-    background-color: green;
-    border: 2px solid green;
-    border-radius: 2px;
+    height: 6px;
+    background-color: #dcdcdc;
+    border-color: #dcdcdc;
+    border-radius: 2.5px;
   }
 
   .switch-slider__change-button {
@@ -177,15 +191,13 @@
   }
 
   .switch-slider__image-box {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
+    top: -20px;
   }
 
-  .switch-slider__image--slide-1 {
-    clip-path: polygon(0 0, 365px 0, 365px 100%, 0 100%);
-  }
-
-  .switch-slider__image--slide-2 {
-    clip-path: polygon(365px 0, 100% 0, 100% 100%, 365px 100%);
+  .switch-slider__picture--slide-1 {
+    width: 53%;
+    background: linear-gradient(to bottom, #ffffff 37%, #f2f2f2 37%);
   }
 
   .switch-slider__changer {
