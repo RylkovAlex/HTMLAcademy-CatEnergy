@@ -73,6 +73,8 @@
 }
 
 .form__text-input,
+.form__text-input::placeholder,
+.form__textarea,
 .form__textarea::placeholder {
   @include indents-0;
   @include oswald-r;

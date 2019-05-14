@@ -154,12 +154,25 @@
   }
 
   .main-nav__item {
+    position: relative;
+
     padding-left: 17px;
     padding-right: 17px;
     padding-top: 22px;
   }
 
-  .main-nav__item--active a::before {
+  .main-nav--index a::before {
+    background-color: transparent;
+  }
+
+  .main-nav--index .main-nav__item--active::before {
+    position: absolute;
+    top: 52px;
+    left: 17px;;
+    content: "";
+    width: calc(100% - 34px);
+    height: 2px;
+
     background-color: #ffffff;
   }
 }
