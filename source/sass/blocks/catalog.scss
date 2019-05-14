@@ -84,6 +84,16 @@
   background-image: url("../../img/icon-right-arrow-long.svg");
 }
 
+.catalog__button:hover::after {
+  right: 7px;
+  width: 34px;
+  background-image: url("../../img/icon-right-arrow-verylong.svg");
+}
+
+.catalog__button:active {
+  opacity: 0.3;
+}
+
 //TABLET:
 @media (min-width: $tablet-width) {
   .catalog {
@@ -91,7 +101,7 @@
     margin-bottom: 30px;
     padding-left: 52px;
     padding-right: 28px;
-    padding-top: 50px;
+    padding-top: 72px;
   }
 
   .catalog__header {
@@ -116,7 +126,7 @@
   }
 
   .catalog__image {
-    top: 70px;
+    top: 92px;
     left: 445px;
     width: 200px;
     height: 200px;
@@ -147,6 +157,10 @@
     top: 10px;
     right: 0;
   }
+
+  .catalog__button:hover::after {
+    right: -10px;
+  }
 }
 
 //DESKTOP:
@@ -174,7 +188,7 @@
   }
 
   .catalog__image {
-    top: 49px;
+    top: 50px;
     left: 52px;
     width: 100px;
     height: 100px;

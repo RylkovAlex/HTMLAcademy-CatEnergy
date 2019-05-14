@@ -1,7 +1,5 @@
 .page-header {
   @include center;
-  padding-top: 11px;
-  padding-bottom: 15px;
   min-height: 65px; //сетка
 
   @include oswald-m;
@@ -15,6 +13,8 @@
 
 .page-header__logo-link {
   display: block;
+  padding-top: 12px;
+  min-height: 65px;
 }
 
 .page-header__logo-img {
@@ -51,6 +51,8 @@
 
   .page-header__logo-link {
     @include indents-0;
+    min-height: unset;
+    padding-top: 0;
   }
 
   .page-header__logo-img {
