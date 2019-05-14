@@ -48,7 +48,7 @@ gulp.task("images", function () {  // оптимизация графики
 gulp.task("webp", function () {  //конвертация графики в webp
   return gulp.src("source/img/**/*.{png,jpg}")
   .pipe(webp({quality: 75}))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("sprite", function () {  //создание svg-спрайта
