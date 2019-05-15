@@ -10,6 +10,7 @@ var wait = require("gulp-wait");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var scco= require("gulp-csso");
+var purgecss = require("gulp-purgecss");
 var uglify = require("gulp-uglify");
 var htmlmin = require("gulp-htmlmin");
 var imagemin = require("gulp-imagemin");
@@ -35,6 +36,14 @@ gulp.task("css", function () {
     .pipe(sourcemap.write("."))  //запись sourcemap-файла в папку, куда будет записан основной файл стилей
     .pipe(gulp.dest("build/css"))  //запись полученного файла
     .pipe(server.stream());
+});
+
+gulp.task("purgecss", () => {  //чистка css (иногда чистит нужное...)
+  return gulp.src("build/css/*.css")
+      .pipe(purgecss({
+          content: ["build/*.html"]
+      }))
+      .pipe(gulp.dest("build/css"));
 });
 
 gulp.task("compress", function () { //минификация js
