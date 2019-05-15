@@ -10,6 +10,8 @@ var wait = require("gulp-wait");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var scco= require("gulp-csso");
+var uglify = require("gulp-uglify");
+var htmlmin = require("gulp-htmlmin");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
@@ -33,6 +35,18 @@ gulp.task("css", function () {
     .pipe(sourcemap.write("."))  //запись sourcemap-файла в папку, куда будет записан основной файл стилей
     .pipe(gulp.dest("build/css"))  //запись полученного файла
     .pipe(server.stream());
+});
+
+gulp.task("compress", function () { //минификация js
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("minify", () => {  //минификация html
+  return gulp.src("build/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("images", function () {  // оптимизация графики
@@ -106,7 +120,9 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  "html"
+  "compress",
+  "html",
+  "minify"
   ));
 
 gulp.task("start", gulp.series("build", "server"));
