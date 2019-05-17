@@ -8,7 +8,7 @@
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="js/menu.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="js/menu.min.js" as="script" crossorigin="anonymous">
 </head>
 
 <body>
@@ -195,35 +195,37 @@
           </div>
         </div>
       </div>
-      <div class="contacts__map" id="map"></div>
+      <div class="contacts__map" id="map">
+        <iframe class="contacts__map2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1555494369114!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
     </section>
   </main>
 
 <footer class="page-footer">
-  <div class="page-footer-wrapper">
+  <div class="page-footer__wrapper">
     <a class="page-footer__logo" href="index.html">
       <img class="page-footer__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
     </a>
-    <ul class="page-footer__social-links social-links">
-      <li class="social-links__item">
-        <a class="social-link social-link--vk" href="#">VK
-          <svg class="icon-vk" role="img" fill="#666666" width ="22" height="12">
+    <ul class="page-footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="#">VK
+          <svg class="social__icon-vk" role="img" fill="#666666" width ="22" height="12">
             <title>иконка Вконтакте</title>
             <use xlink:href="#icon-vk"></use>
           </svg>
         </a>
       </li>
-      <li class="social-links__item">
-        <a class="social-link social-link--inst" href="#">Instagram
-          <svg class="icon-insta" role="img" fill="#666666" width="17" height="17">
+      <li class="social__item">
+        <a class="social__link social__link--inst" href="#">Instagram
+          <svg class="social__icon-insta" role="img" fill="#666666" width="17" height="17">
             <title>иконка Instagram</title>
             <use xlink:href="#icon-insta"></use>
           </svg>
         </a>
       </li>
-      <li class="social-links__item">
-        <a class="social-link social-link--fb" href="#">Facebook
-          <svg class="icon-fb" role="img" fill="#666666" width="10" height="19">
+      <li class="social__item">
+        <a class="social__link social__link--fb" href="#">Facebook
+          <svg class="social__icon-fb" role="img" fill="#666666" width="10" height="19">
             <title>иконка Facebook</title>
             <use xlink:href="#icon-fb"></use>
           </svg>

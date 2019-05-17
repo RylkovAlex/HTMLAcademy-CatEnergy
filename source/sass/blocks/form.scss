@@ -1,9 +1,9 @@
-.form__wrapper {
+.form {
   width: 100%;
   overflow: hidden; // для зелёныз полос
 }
 
-.form {
+.form__form {
   display: flex;
   flex-direction: column;
 
@@ -56,6 +56,8 @@
 }
 
 .form__explanation {
+  display: block;
+
   @include indents-0;
   font-size: 14px;
   line-height: 16px;
@@ -127,8 +129,7 @@
 }
 
 .form__text-input:focus {
-  outline: none;
-  border: solid 2px #444444;
+  outline: solid 2px #444444;
 }
 
 // .form__text-input:invalid {
@@ -221,7 +222,7 @@
 
 .form__text-input--email,
 .form__text-input--phone {
-  padding-left: 16px;
+  padding-left: 10px;
   padding-right: 35px;
 }
 
@@ -241,20 +242,20 @@
 .icon-mail {
   position: absolute;
   top: 15px;
-  right: 15px;
+  right: 21px;
 }
 
 .icon-phone {
   position: absolute;
   top: 13px;
-  right: 12px;
+  right: 18px;
 }
 
 .form__group4 {
   @include indents-0;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
 
   border: none;
 }
@@ -279,6 +280,10 @@
   padding-right: 12px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
+}
+
+.form__textarea:focus {
+  outline: solid 2px #444444;
 }
 
 .form__group5 {
@@ -343,11 +348,13 @@
   width: 280px;
   margin: 0 auto;
   margin-bottom: 20px;
+
+  font-size: 16px;
 }
 
 // --------------------------------TABLET:
 @media (min-width: $tablet-width) {
-  .form {
+  .form__form {
     max-width: $tablet-width;
     width: 100%;
 
@@ -467,6 +474,8 @@
   .form__text-input--email,
   .form__text-input--phone {
     width: unset;
+
+    padding-left: 11px;
   }
 
   .form__text-label--email {
@@ -498,6 +507,7 @@
     margin-bottom: 77px;
   }
 
+  .form__textarea,
   .form__textarea::placeholder {
     font-size: 20px;
     line-height: 30px;
@@ -563,6 +573,8 @@
     height: 52px;
     margin: 0;
     margin-right: 62px;
+
+    font-size: 20px;
   }
 
   .form__explanation {
@@ -573,7 +585,7 @@
 
 // --------------------------------Desktop:
 @media (min-width: $desktop-width) {
-  .form {
+  .form__form {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;

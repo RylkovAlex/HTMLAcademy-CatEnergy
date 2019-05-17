@@ -1,3 +1,5 @@
+var extraMap = document.querySelector('.contacts__map2');
+extraMap.classList.add('contacts__map2--hide'); //убираю iframe т.к. работает JS
 var desktop_width = window.matchMedia("screen and (min-width: 1300px)");
 var mobile_width = window.matchMedia("screen and (max-width: 767px)");
 desktop_width.addListener(setup_for_width);
