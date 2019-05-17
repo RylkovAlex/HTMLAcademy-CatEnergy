@@ -49,6 +49,9 @@ gulp.task("purgecss", () => {  //чистка css (иногда чистит н�
 gulp.task("compress", function () { //минификация js
   return gulp.src("source/js/*.js")
     .pipe(uglify())
+    .pipe(rename({
+      extname: ".min.js"
+    }))
     .pipe(gulp.dest("build/js"));
 });
 
@@ -75,12 +78,12 @@ gulp.task("webp", function () {  //конвертация графики в webp
 });
 
 gulp.task("sprite", function () {  //создание svg-спрайта
-  return gulp.src("source/img/icon-*.svg")
+  return gulp.src("source/img/sprite/*.svg")
   .pipe(svgstore({
     inlineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("html", function () {  //плагин posthtml для тэга include
@@ -113,7 +116,7 @@ gulp.task("copy", function () {
   return gulp.src([
   "source/fonts/**/*.{woff,woff2}",
   "source/img/**",
-  "source/js/**",
+  "source/js/support/**",
   "source/*.ico"
   ], {
   base: "source"
@@ -130,6 +133,7 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "compress",
+  "sprite",
   "html",
   "minify"
   ));

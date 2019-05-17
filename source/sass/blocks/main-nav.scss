@@ -63,7 +63,7 @@
 
 .main-nav__item--active a::before {
   position: absolute;
-  top: 33px;
+  top: 35px;
   left: 0;
   content: "";
   width: 100%;
@@ -104,6 +104,11 @@
 
   .main-nav__menu-list {
     display: block;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -168,7 +173,7 @@
   .main-nav--index .main-nav__item--active::before {
     position: absolute;
     top: 52px;
-    left: 17px;;
+    left: 17px;
     content: "";
     width: calc(100% - 34px);
     height: 2px;
