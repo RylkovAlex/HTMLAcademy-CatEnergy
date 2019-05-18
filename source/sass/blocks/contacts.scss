@@ -51,6 +51,10 @@
   height: 365px;
 }
 
+.contacts__map2--hide {
+  display: none;
+}
+
 //---------------------------------TABLET:
 @media (min-width: $tablet-width) {
   .contacts {
@@ -117,6 +121,7 @@
     // outline: 1px solid green;
     position: absolute;
     top: 96px;
+    left: 40px;
     width: 570px;
     min-height: 201px; //сетка
     padding-top: 50px;

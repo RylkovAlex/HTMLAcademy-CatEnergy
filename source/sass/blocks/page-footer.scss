@@ -4,7 +4,7 @@
   background-color: $bg-grey;
 }
 
-.page-footer-wrapper {
+.page-footer__wrapper {
   @include center;
 
   display: flex;
@@ -31,7 +31,7 @@
   margin: 0 auto;
 }
 
-.page-footer__social-links {
+.page-footer__social {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
@@ -67,7 +67,7 @@
 
 //---------------------------------TABLET:
 @media (min-width: $tablet-width) {
-  .page-footer-wrapper {
+  .page-footer__wrapper {
     max-width: $tablet-width;
     width: 100%;
 
@@ -94,7 +94,7 @@
     margin: 0;
   }
 
-  .page-footer__social-links {
+  .page-footer__social {
     width: 124px;
 
     @include indents-0;
@@ -111,7 +111,7 @@
 
 //---------------------------------DESKTOP:
 @media (min-width: $desktop-width) {
-  .page-footer-wrapper {
+  .page-footer__wrapper {
     max-width: $desktop-width;
     width: 100%;
 
@@ -119,7 +119,7 @@
     padding-right: 40px;
   }
 
-  .page-footer__social-links {
+  .page-footer__social {
     margin-right: 250px;
   }
 

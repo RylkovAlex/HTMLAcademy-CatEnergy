@@ -1,4 +1,4 @@
-.social-links {
+.social {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,35 +12,35 @@
   font-size: 0;
 }
 
-.social-link {
+.social__link {
   display: block;
 }
 
-.social-link:hover .icon-insta,
-.social-link:hover .icon-fb,
-.social-link:hover .icon-vk {
+.social__link:hover .social__icon-insta,
+.social__link:hover .social__icon-fb,
+.social__link:hover .social__icon-vk {
   fill: $theme-color;
 }
 
-.social-link:active .icon-insta,
-.social-link:active .icon-fb,
-.social-link:active .icon-vk {
+.social__link:active .social__icon-insta,
+.social__link:active .social__icon-fb,
+.social__link:active .social__icon-vk {
   fill: $theme-color;
   opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
-  .icon-fb {
+  .social__icon-fb {
     width: 14px;
     height: 28px;
   }
 
-  .icon-vk {
+  .social__icon-vk {
     width: 30px;
     height: 16px;
   }
 
-  .icon-insta {
+  .social__icon-insta {
     width: 23px;
     height: 23px;
   }
