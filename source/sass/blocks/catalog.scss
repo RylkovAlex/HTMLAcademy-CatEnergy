@@ -44,7 +44,7 @@
 .catalog__header {
   @include indents-0;
   padding-left: 72px;
-  padding-top: 5px;
+  padding-top: 7px;
   padding-bottom: 5px;
   margin-bottom: 25px;
 
@@ -81,13 +81,13 @@
   height: 12px;
 
   content: "";
-  background-image: url("../../img/icon-right-arrow-long.svg");
+  background-image: url("../img/icon-right-arrow-long.svg");
 }
 
 .catalog__button:hover::after {
   right: 7px;
   width: 34px;
-  background-image: url("../../img/icon-right-arrow-verylong.svg");
+  background-image: url("../img/icon-right-arrow-verylong.svg");
 }
 
 .catalog__button:active {

@@ -88,7 +88,7 @@
           <div class="form__group3-box">
             <div class="form__row form__row--email">
               <label class="form__text-label form__text-label--email" for="e-mail">E-Mail:*</label>
-              <input class="form__text-input form__text-input--email" type="text" id="e-mail" name="e-mail" value=""
+              <input class="form__text-input form__text-input--email" type="email" id="e-mail" name="e-mail" value=""
                 placeholder="kuklachev@gmail.com" required>
               <svg class="icon-mail" width="18" height="14">
                   <title>иконка письмо</title>
@@ -97,8 +97,8 @@
             </div>
             <div class="form__row form__row--phone">
               <label class="form__text-label form__text-label--phone" for="phone">Телефон:*</label>
-              <input class="form__text-input form__text-input--phone" type="text" id="phone" name="phone" value=""
-                placeholder="8 (960) 900-60-90" required>
+              <input class="form__text-input form__text-input--phone" type="tel" id="phone" name="phone" value=""
+                placeholder="8 (960) 900-60-90" pattern="[\8]\[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]d{2}" required>
               <svg class="icon-phone" width="21" height="21">
                   <title>иконка телефон</title>
                   <use xlink:href="#icon-phone"></use>

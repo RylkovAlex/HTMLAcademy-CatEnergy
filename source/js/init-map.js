@@ -1,12 +1,14 @@
-var extraMap = document.querySelector('.contacts__map2');
-extraMap.classList.add('contacts__map2--hide'); //убираю iframe т.к. работает JS
+var extraMap = document.querySelector(".contacts__map-img");
+var extraMapPin = document.querySelector(".contacts__map-pin");
+extraMap.classList.add("contacts__map--hide"); //убираю т.к. работает JS
+extraMapPin.classList.add("contacts__map--hide"); //убираю т.к. работает JS
 var desktop_width = window.matchMedia("screen and (min-width: 1300px)");
 var mobile_width = window.matchMedia("screen and (max-width: 767px)");
 desktop_width.addListener(setup_for_width);
 // переменные для координат центра карты и маркера:
     var center_lat, center_lng, pin_lat = 59.938738, pin_lng = 30.323059;
 // картинка:
-var image = 'img/map-pin.png';
+var image = "img/map-pin.png";
 // Функция для переопределения переменных в зависимости от ширины экрана:
 function setup_for_width(desktop_width) {
   if (desktop_width.matches) {
@@ -20,14 +22,14 @@ function setup_for_width(desktop_width) {
   // ширина экрана меньше 768 пикселей:
   if (mobile_width.matches) {
     center_lat = pin_lat;
-    image = 'img/map-pin-png-50.png';
+    image = "img/map-pin-png-50.png";
   }
 }
 
 setup_for_width(desktop_width);
 
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementById("map"), {
       zoom: 17,
       center: {lat: center_lat, lng: center_lng}
     });

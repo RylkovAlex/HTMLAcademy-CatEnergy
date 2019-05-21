@@ -178,6 +178,10 @@
   border-color: #bababa;
 }
 
+.form__radio-input:focus + .form__radio-label::before {
+  border-color: $theme-color;
+}
+
 .form__radio-label:active::before,
 .form__radio-label:active {
   opacity: 0.3;
@@ -324,12 +328,17 @@
   border: 1px solid #cdcdcd;
 }
 
-.form__checkbox-label:hover::before {
+.form__checkbox-label:hover::before,
+.form__checkbox-label:focus::before {
   border-color: #bababa;
 }
 
 .form__checkbox-label:active {
   opacity: 0.3;
+}
+
+.form__checkbox-input:focus + .form__checkbox-label::before {
+  outline: 1px solid $theme-color;
 }
 
 .form__checkbox-input:checked + .form__checkbox-label::after {

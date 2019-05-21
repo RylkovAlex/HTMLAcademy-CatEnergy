@@ -63,7 +63,7 @@
 
 .main-nav__item--active a::before {
   position: absolute;
-  top: 35px;
+  top: 32px;
   left: 0;
   content: "";
   width: 100%;
@@ -88,7 +88,7 @@
   .main-nav--closed {
     .main-nav__toggle {
       width: 25px;
-      background-image: url("../../img/icon-mobile-menu.svg");
+      background-image: url("../img/icon-mobile-menu.svg");
     }
 
     .main-nav__menu-list {

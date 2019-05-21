@@ -31,11 +31,13 @@
 }
 
 .example__fact-value {
+  margin: 0;
+
   @include oswald-r;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  margin: 0;
+  color: $title-color;
 }
 
 .example__cost {
@@ -47,7 +49,7 @@
 }
 
 .example__description {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .example__facts {
@@ -61,10 +63,13 @@
   min-width: 124px;
   min-height: 56px;
   padding-top: 13px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-right: 32px;
   margin-bottom: 20px;
 
-  border: 1px solid green;
+  border: 1px solid #cdcdcd;
 }
 
 .example__text-content .example__fact:last-of-type {
@@ -83,6 +88,7 @@
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+  color: $light-black4;
 
   background-color: $bg-grey;
 }

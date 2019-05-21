@@ -46,12 +46,26 @@
 }
 
 .contacts__map {
+  position: relative;
   display: block;
   width: 100%;
   height: 365px;
 }
 
-.contacts__map2--hide {
+.contacts__map-img {
+  margin: 0 auto;
+  height: 365px;
+}
+
+.contacts__map-pin {
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contacts__map--hide {
   display: none;
 }
 
@@ -97,7 +111,8 @@
     margin-bottom: 20px;
   }
 
-  .contacts__map {
+  .contacts__map,
+  .contacts__map-img {
     height: 395px;
   }
 }
@@ -140,7 +155,13 @@
     text-align: left;
   }
 
-  .contacts__map {
+  .contacts__map,
+  .contacts__map-img {
     height: 400px;
+  }
+
+  .contacts__map-pin {
+    top: 40%;
+    left: 73%;
   }
 }
