@@ -51,6 +51,10 @@
   opacity: 0.3;
 }
 
+.page-footer__copyright-link span {
+  max-width: 50%;
+}
+
 .page-footer__copyright-icon {
   width: 27px;
   height: 34px;
@@ -106,6 +110,10 @@
   .page-footer__copyright-link {
     width: 165px;
     padding-top: 0;
+  }
+
+  .page-footer__copyright-link span {
+    max-width: 80%;
   }
 }
 

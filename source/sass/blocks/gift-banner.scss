@@ -34,6 +34,8 @@
 .gift-banner__text {
   display: block;
   width: 165px;
+  max-height: 80px;
+  overflow: hidden; //защита от переполнения
   margin: 0 auto;
 
   font-size: 16px;

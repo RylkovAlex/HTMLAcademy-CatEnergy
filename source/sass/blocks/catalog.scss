@@ -63,6 +63,7 @@
 
 .catalog__button {
   position: relative;
+  display: inline-block;
   padding-right: 50px;
 
   @include oswald-r;
@@ -154,7 +155,7 @@
   }
 
   .catalog__button::after {
-    top: 10px;
+    top: 15%;
     right: 0;
   }
 
@@ -169,7 +170,7 @@
     width: 570px; //сетка
     padding-left: 52px;
     padding-top: 73px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
   .catalog__header {

@@ -10,12 +10,14 @@
   @include indents-0;
 }
 
-.catalogues__item {
-  margin-bottom: 20px;
+@media (max-width: $mobile-width-only) {
+  .catalogues__list .catalogues__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.catalogues__item:last-child {
-  margin-bottom: 0;
+.catalogues__item {
+  margin-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -26,6 +28,12 @@
     min-height: 775px;
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 0;
+  }
+
+  .catalogues__list {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -37,10 +45,12 @@
     min-height: 375px; //сетка
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 0;
   }
 
   .catalogues__list {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }

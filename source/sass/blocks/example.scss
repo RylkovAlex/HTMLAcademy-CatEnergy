@@ -31,7 +31,8 @@
 }
 
 .example__fact-value {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 90px;
 
   @include oswald-r;
   font-size: 24px;
@@ -78,12 +79,19 @@
 
 .example__fact-title {
   position: absolute;
-  bottom: -16px;
+  // bottom: -16px;
+  top: 85%;
   left: 50%;
   transform: translateX(-50%);
 
   display: block;
   width: auto;
+  max-width: calc(100% - 10px);
+  max-height: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+  word-wrap: break-word;
 
   font-size: 12px;
   line-height: 12px;
@@ -145,12 +153,18 @@
   }
 
   .example__fact-value {
+    max-width: 140px;
+
     font-size: 30px;
     line-height: 37px;
   }
 
   .example__fact-title {
-    bottom: -7px;
+    top: 88%;
+    max-height: 14px;
+
+    padding-left: 5px;
+    padding-right: 5px;
 
     font-size: 14px;
     line-height: 14px;

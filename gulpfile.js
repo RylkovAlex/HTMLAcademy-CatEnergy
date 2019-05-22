@@ -38,7 +38,7 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("purgecss", () => {  //чистка css (иногда чистит нужное...)
+gulp.task("purgecss", function () {  //чистка css (тут анимательно, т.к. иногда чистит нужное...)
   return gulp.src("build/css/*.css")
       .pipe(purgecss({
           content: ["build/*.html"]
@@ -55,7 +55,7 @@ gulp.task("compress", function () { //минификация js
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("minify", () => {  //минификация html
+gulp.task("minify", function () {  //минификация html
   return gulp.src("build/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
@@ -74,7 +74,7 @@ gulp.task("images", function () {  // оптимизация графики
 gulp.task("webp", function () {  //конвертация графики в webp
   return gulp.src("source/img/**/*.{png,jpg}")
   .pipe(webp({quality: 75}))
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("sprite", function () {  //создание svg-спрайта
@@ -83,7 +83,7 @@ gulp.task("sprite", function () {  //создание svg-спрайта
     inlineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {  //плагин posthtml для тэга include
@@ -105,6 +105,7 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css")); //следит за файлами {scss,sass} внутри всех подпапок source/sass/ и при изменении любого запускает gulp.task "css"
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/img/sprite/*.svg", gulp.series("sprite", "html", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -131,6 +132,7 @@ gulp.task("clean", function () {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
+  "webp",
   "css",
   "compress",
   "sprite",
