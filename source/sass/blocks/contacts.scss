@@ -18,10 +18,11 @@
 
 .contacts__text-box {
   display: flex;
+  justify-content: space-between;
 
   @include center;
-  padding-top: 15px;
-  padding-bottom: 13px;
+  padding-top: 12px;
+  padding-bottom: 16px;
 }
 
 .contacts__title {
@@ -32,6 +33,8 @@
   font-size: 16px;
   line-height: 20px;
   text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   color: $title-color;
 }
 
@@ -44,6 +47,8 @@
 .contacts__address2 {
   @include indents-0;
   line-height: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .contacts__map {
@@ -89,17 +94,12 @@
   }
 
   .contacts__title {
-    width: 160px;
+    width: 240px;
     padding-top: 15px;
     margin-top: 0;
-    margin-right: 30px;
 
     font-size: 20px;
     line-height: 25px;
-  }
-
-  .contacts__address {
-    margin-left: auto;
   }
 
   .contacts__address1,
@@ -148,12 +148,13 @@
   }
 
   .contacts__title {
+    width: 225px;
     padding-right: 0;
   }
 
   .contacts__title,
   .contacts__address {
-    max-height: 140px;
+    height: 140px;
     overflow: auto;
   }
 

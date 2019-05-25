@@ -1,12 +1,12 @@
 .banner {
   background:
     url("../img/index-background-mobile@1x.jpg") no-repeat 50% 0,
-    linear-gradient(#65a93c 305px, #ffffff 305px);
+    linear-gradient(#65a93c 60.5%, #ffffff 60.5%);
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background:
       url("../img/index-background-mobile@2x.jpg") 50% 0 / auto 305px no-repeat,
-      linear-gradient(#65a93c 305px, #ffffff 305px);
+      linear-gradient(#65a93c 60.5%, #ffffff 60.5%);
   }
 }
 
@@ -30,6 +30,8 @@
   line-height: 36px;
   text-align: center;
   text-transform: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   color: #ffffff;
 }
@@ -41,13 +43,15 @@
   font-size: 14px;
   line-height: 14px;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   color: #ffffff;
 }
 
 .banner__button {
   position: absolute;
   width: 280px;
-  height: 40px;
+  min-height: 40px;
   bottom: 22px;
   right: 20px;
 }
@@ -74,6 +78,7 @@
   }
 
   .banner__title {
+    max-height: unset;
     margin-bottom: 42px;
 
     font-size: 60px;
@@ -83,6 +88,7 @@
   }
 
   .banner__lead {
+    max-height: unset;
     margin-bottom: 47px;
 
     font-size: 20px;
@@ -98,7 +104,7 @@
   .banner__button {
     position: static;
     width: 245px;
-    height: 52px;
+    min-height: 52px;
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -106,12 +112,19 @@
 
 // DESKTOP
 @media (min-width: $desktop-width) {
+  .banner {
+    width: auto;
+    margin-bottom: 78px;
+
+    background: linear-gradient(to right, #ffffff 50%, #65a93c 50%);
+  }
+
   .banner::before {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 696px;
+    min-height: 696px;
     content: "";
 
     background:
@@ -125,11 +138,6 @@
         url("../img/index-background-desktop@2x.jpg") 100% 0% / 720px auto no-repeat,
         linear-gradient(to right, #ffffff 50%, #65a93c 50%);
     }
-  }
-
-  .banner {
-    width: auto;
-    margin-bottom: 78px;
   }
 
   .banner__wrapper {

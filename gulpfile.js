@@ -30,8 +30,8 @@ gulp.task("css", function () {
     .pipe(postcss([  //плагин postcss со своим плагином autoprefixer
       autoprefixer()
     ]))
-    .pipe(scco())  //минификация css
     .pipe(gulp.dest("source/css"))
+    .pipe(scco())  //минификация css
     .pipe(rename("style.min.css"))  //переименовываем минифицированный файл
     .pipe(sourcemap.write("."))  //запись sourcemap-файла в папку, куда будет записан основной файл стилей
     .pipe(gulp.dest("build/css"))  //запись полученного файла

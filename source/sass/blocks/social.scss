@@ -1,19 +1,27 @@
 .social {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 
   @include indents-0;
+  margin-right: -35px;
   padding-top: 23px;
   padding-bottom: 11px;
-  padding-left: 73px;
-  padding-right: 82px;
+  padding-left: 20px;
+  padding-right: 15px;
   list-style: none;
   font-size: 0;
 }
 
+.social__item {
+  min-width: 22px;
+  margin-right: 35px;
+  text-align: left;
+}
+
 .social__link {
-  display: block;
+  display: inline-block;
 }
 
 .social__link:hover .social__icon-insta,
@@ -30,6 +38,19 @@
 }
 
 @media (min-width: $tablet-width) {
+  .social {
+    @include indents-0;
+    margin-right: -28px;
+    padding-top: 9px;
+    padding-right: 19px;
+  }
+
+  .social__item {
+    min-width: unset;
+    min-height: 28px;
+    margin-right: 28px;
+  }
+
   .social__icon-fb {
     width: 14px;
     height: 28px;

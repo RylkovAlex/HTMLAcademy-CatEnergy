@@ -14,7 +14,7 @@
 .example__text-content {
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 18px;
+  padding-top: 15px;
   margin-bottom: 20px;
 }
 
@@ -27,6 +27,8 @@
   margin-bottom: 23px;
   text-align: left;
   text-transform: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   color: $title-color;
 }
 
@@ -38,6 +40,8 @@
   font-size: 24px;
   line-height: 24px;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   color: $title-color;
 }
 
@@ -46,11 +50,14 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   color: $title-color;
 }
 
 .example__description {
   margin-bottom: 23px;
+  overflow-wrap: break-word;
 }
 
 .example__facts {
@@ -79,18 +86,18 @@
 
 .example__fact-title {
   position: absolute;
-  // bottom: -16px;
-  top: 85%;
+  bottom: -17px;
+  // top: 85%;
   left: 50%;
   transform: translateX(-50%);
 
   display: block;
   width: auto;
   max-width: calc(100% - 10px);
-  max-height: 25px;
+  height: 25px;
   padding-left: 15px;
   padding-right: 15px;
-  overflow: hidden;
+  overflow: auto;
   word-wrap: break-word;
 
   font-size: 12px;
@@ -160,8 +167,8 @@
   }
 
   .example__fact-title {
-    top: 88%;
-    max-height: 14px;
+    bottom: -26px;
+    height: 34px;
 
     padding-left: 5px;
     padding-right: 5px;

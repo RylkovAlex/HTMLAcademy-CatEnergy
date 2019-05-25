@@ -12,6 +12,10 @@
   font-size: 14px;
   line-height: 18px;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
   color: #ffffff;
 
   background-color: $theme-color;

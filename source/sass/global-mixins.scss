@@ -1,14 +1,14 @@
 @mixin oswald-r {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: normal;
   font-style: normal;
 }
 
 @mixin oswald-m {
-  font-family: "Oswald Medium", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 

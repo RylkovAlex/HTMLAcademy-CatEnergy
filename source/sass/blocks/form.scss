@@ -23,6 +23,7 @@
   line-height: 60px;
   text-align: left;
   text-transform: none;
+  overflow-wrap: break-word;
   color: $title-color;
 }
 
@@ -37,12 +38,17 @@
   font-size: 14px;
   line-height: 18px;
   text-align: left;
+  overflow-wrap: break-word;
   color: $title-color;
 }
 
 .form__legend {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-all;
 
   @include indents-0;
   margin-bottom: 33px;
@@ -62,28 +68,41 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 .form__text-label,
 .form__radio-label,
 .form__checkbox-label {
+  max-width: 35%;
+
   @include oswald-r;
   font-size: 16px;
   line-height: 18px;
   text-align: left;
+  overflow-wrap: break-word;
   color: $light-black2;
 }
 
+.form__checkbox-label,
+.form__radio-label {
+  max-width: 100%;
+}
+
 .form__text-input,
-.form__text-input::placeholder,
-.form__textarea,
-.form__textarea::placeholder {
+.form__textarea {
   @include indents-0;
   @include oswald-r;
   font-size: 16px;
   line-height: 18px;
   text-align: left;
   color: $light-black4;
+}
+
+.form__text-input::placeholder,
+.form__textarea::placeholder {
+  color: $light-black4;
+  opacity: 1;
 }
 
 .form__text-input::placeholder {
@@ -99,6 +118,7 @@
 
 .form__row {
   display: flex;
+  max-width: 280px;
   align-items: center;
 
   margin-bottom: 14px;
@@ -250,13 +270,13 @@
 .icon-mail {
   position: absolute;
   top: 15px;
-  right: 21px;
+  right: 16px;
 }
 
 .icon-phone {
   position: absolute;
   top: 13px;
-  right: 18px;
+  right: 12px;
 }
 
 .form__group4 {
@@ -395,6 +415,10 @@
     line-height: 30px;
   }
 
+  .form__row {
+    max-width: 635px;
+  }
+
   .form__text-label,
   .form__text-input,
   .form__text-input::placeholder,
@@ -409,6 +433,8 @@
   }
 
   .form__legend {
+    max-width: 630px;
+
     font-size: 36px;
     line-height: 36px;
   }
@@ -587,7 +613,7 @@
 
   .form__submit-button {
     width: 283px;
-    height: 52px;
+    min-height: 52px;
     margin: 0;
     margin-right: 62px;
 
@@ -623,6 +649,10 @@
 
   .form__lead {
     padding-left: 0;
+  }
+
+  .form__legend {
+    max-width: 1200px;
   }
 
   .form__group1 {

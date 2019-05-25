@@ -15,6 +15,7 @@
 .extra-goods__heading {
   position: relative;
   width: auto;
+  max-width: 90%;
 
   @include indents-0;
   padding-top: 27px;
@@ -25,6 +26,8 @@
   font-size: 24px;
   line-height: 24px;
   text-transform: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   color: $title-color;
 }
 
@@ -42,6 +45,7 @@
 
 .extra-goods__table {
   width: inherit;
+  margin-bottom: 40px;
 }
 
 .extra-goods__table tbody {
@@ -50,8 +54,6 @@
   width: inherit;
 
   @include indents-0;
-  margin-bottom: 40px;
-
   border-collapse: collapse;
   border: none;
 }
@@ -81,6 +83,8 @@
   margin-bottom: 12px;
   font-size: 16px;
   line-height: 16px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   color: $light-black2;
 }
 
@@ -90,11 +94,14 @@
 
   font-size: 14px;
   line-height: 14px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .extra-goods__price {
   text-align: right;
   margin-bottom: 12px;
+  padding-left: 10px;
 }
 
 
@@ -143,7 +150,7 @@
 
   .extra-goods__table {
     width: 100%;
-    margin-bottom: 26px;
+    margin-bottom: 66px;
   }
 
   .extra-goods__heading::before,
@@ -205,6 +212,7 @@
   .extra-goods__price {
     width: 50px;
     margin-left: 45px;
+    padding-left: 0;
   }
 }
 
@@ -223,6 +231,7 @@
   }
 
   .extra-goods__heading {
+    max-width: none;
     padding-left: 0;
     padding-top: 25px;
   }
@@ -238,7 +247,7 @@
 
   .extra-goods__table {
     width: 895px;
-    margin-bottom: 27px;
+    margin-bottom: 0;
   }
 
   .extra-goods__item {

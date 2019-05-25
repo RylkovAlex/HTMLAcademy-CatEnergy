@@ -42,6 +42,8 @@
 }
 
 .catalog__header {
+  width: auto;
+
   @include indents-0;
   padding-left: 72px;
   padding-top: 7px;
@@ -53,17 +55,22 @@
   line-height: 37px;
   color: $title-color;
   text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 .catalog__description {
   padding-bottom: 20px;
   margin-bottom: 19px;
+  overflow-wrap: break-word;
   border-bottom: 2px solid #d9d9d9;
 }
 
 .catalog__button {
   position: relative;
   display: inline-block;
+  max-width: 100%;
   padding-right: 50px;
 
   @include oswald-r;
@@ -71,6 +78,8 @@
   line-height: 16px;
   color: $title-color;
   text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .catalog__button::after {
@@ -106,7 +115,7 @@
   }
 
   .catalog__header {
-    width: 340px;
+    max-width: 340px;
     padding-left: 0;
     margin-bottom: 20px;
 
@@ -174,7 +183,7 @@
   }
 
   .catalog__header {
-    width: 380px;
+    max-width: 490px;
     padding-left: 163px;
     margin-bottom: 69px;
   }

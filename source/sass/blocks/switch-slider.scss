@@ -6,12 +6,15 @@
 
 .switch-slider__slide-title {
   position: relative;
+  max-width: 20%;
 
   @include oswald-r;
   font-size: 16px;
   line-height: 20px;
   color: $title-color;
   text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .switch-slider__image-box {
@@ -84,7 +87,8 @@
   }
 
   .switch-slider__image {
-    max-width: unset;
+    max-width: none; //IE
+    // max-width: unset;
     height: 100%;
 
     margin-bottom: 0;
@@ -120,18 +124,9 @@
   }
 
   .switch-slider__slide-title {
+    padding-bottom: 5px;
     font-size: 20px;
     line-height: 20px;
-  }
-
-  .switch-slider__slide-title::before {
-    position: absolute;
-    top: 25px;
-    left: 0;
-
-    content: "";
-    width: 100%;
-    height: 1px;
     border-bottom: 1px dotted #cdcdcd;
   }
 
