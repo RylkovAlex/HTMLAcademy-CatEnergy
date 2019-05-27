@@ -280,6 +280,8 @@
 }
 
 .form__group4 {
+  min-height: 214px;
+
   @include indents-0;
   padding-left: 20px;
   padding-right: 20px;
@@ -318,7 +320,7 @@
   @include indents-0;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
   border: none;
 }
@@ -421,7 +423,6 @@
 
   .form__text-label,
   .form__text-input,
-  .form__text-input::placeholder,
   .form__radio-label,
   .form__checkbox-label {
     font-size: 20px;
@@ -518,15 +519,15 @@
   .form__text-input--phone {
     width: unset;
 
-    padding-left: 11px;
+    padding-left: 19px;
   }
 
   .form__text-label--email {
-    margin-right: 28px;
+    margin-right: 20px;
   }
 
   .form__text-label--phone {
-    margin-right: 23px;
+    margin-right: 15px;
   }
 
   .icon-mail {
@@ -540,6 +541,8 @@
   }
 
   .form__group4 {
+    min-height: 290px;
+
     padding-left: 40px;
     padding-right: 37px;
     margin-bottom: 61px;
@@ -550,13 +553,9 @@
     margin-bottom: 77px;
   }
 
-  .form__textarea,
-  .form__textarea::placeholder {
+  .form__textarea {
     font-size: 20px;
     line-height: 30px;
-  }
-
-  .form__textarea {
     height: 173px;
     padding-top: 9px;
     padding-left: 18px;
@@ -694,11 +693,12 @@
 
   .form__text-input--email,
   .form__text-input--phone {
-    padding-left: 12px;
+    padding-left: 20px;
   }
 
   .form__group4 {
     width: 100%;
+    min-height: 290px; //IE
     padding: 0;
     margin-bottom: 63px;
   }

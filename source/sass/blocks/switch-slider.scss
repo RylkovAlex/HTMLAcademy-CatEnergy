@@ -102,8 +102,9 @@
 
   .switch-slider__picture--slide-1 {
     position: relative;
+    left: 6px;
     height: 100%;
-    width: 50%;
+    width: 49.2%;
     z-index: 1;
     background: linear-gradient(to bottom, #ffffff 33%, #f2f2f2 33%);
     // clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
@@ -112,7 +113,7 @@
   .switch-slider__picture--slide-2 {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -7px;
     height: 100%;
     width: 100%;
     z-index: 0;
@@ -191,8 +192,13 @@
   }
 
   .switch-slider__picture--slide-1 {
+    left: 0;
     width: 53%;
     background: linear-gradient(to bottom, #ffffff 37%, #f2f2f2 37%);
+  }
+
+  .switch-slider__picture--slide-2 {
+    right: 0;
   }
 
   .switch-slider__changer {

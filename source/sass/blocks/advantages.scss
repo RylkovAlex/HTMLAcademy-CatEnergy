@@ -7,7 +7,7 @@
 
 .advantages__title {
   @include indents-0;
-  margin-bottom: 27px;
+  margin-bottom: 30px;
 
   @include oswald-r;
   font-size: 36px;
@@ -100,6 +100,7 @@
   }
 
   .advantages__title {
+    margin-bottom: 25px;
     font-size: 60px;
     line-height: 60px;
   }

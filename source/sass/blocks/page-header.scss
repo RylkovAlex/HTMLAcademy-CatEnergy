@@ -53,6 +53,7 @@
     @include indents-0;
     min-height: unset;
     padding-top: 0;
+    margin-right: auto; //IE
   }
 
   .page-header__logo-img {
