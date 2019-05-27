@@ -248,8 +248,14 @@
   background-color: $theme-color;
 }
 
+.form__input-container {
+  position: relative;
+  flex-grow: 1;
+}
+
 .form__text-input--email,
 .form__text-input--phone {
+  width: 100%;
   padding-left: 10px;
   padding-right: 35px;
 }
@@ -270,13 +276,13 @@
 .icon-mail {
   position: absolute;
   top: 15px;
-  right: 16px;
+  right: 19px;
 }
 
 .icon-phone {
   position: absolute;
   top: 13px;
-  right: 12px;
+  right: 16px;
 }
 
 .form__group4 {
@@ -517,7 +523,7 @@
 
   .form__text-input--email,
   .form__text-input--phone {
-    width: unset;
+    width: 100%;
 
     padding-left: 19px;
   }
