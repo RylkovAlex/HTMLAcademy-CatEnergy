@@ -18,6 +18,7 @@
   right: 3px;
   height: 19px;
 
+  @include indents-0;
   font-size: 0;
 
   background-color: transparent;
@@ -59,7 +60,8 @@
 }
 
 .main-nav__item a {
-  display: block;
+  display: inline-block;
+  max-width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -96,6 +98,7 @@
   .main-nav--closed {
     .main-nav__toggle {
       width: 25px;
+      right: 0;
       background-image: url("../img/icon-mobile-menu.svg");
     }
 
@@ -146,6 +149,10 @@
     margin-left: 35px;
 
     border: none;
+  }
+
+  .main-nav__item a {
+    display: block;
   }
 }
 
